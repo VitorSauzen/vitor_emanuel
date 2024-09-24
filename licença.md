@@ -4,6 +4,8 @@ This license requires that reusers give credit to the creator. It allows reusers
 
 
 BY: Credit must be given to you, the creator.
+<br>
 NC: Only noncommercial use of your work is permitted.
 Noncommercial means not primarily intended for or directed towards commercial advantage or monetary compensation.
+<br>
 ND: No derivatives or adaptations of your work are permitted.
