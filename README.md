@@ -8,7 +8,8 @@
 - [4. Diagrama ER](#4-diagrama-er)
 - [5. Diagrama de classes](#5-diagrama-de-classes)
 - [6. Casos de uso](#6-casos-de-uso)
-  - [6.1 Histórias de usuário](#61-histórias-de-usuário)
+  - [6.1 Diagrama de Casos de Uso](#61-diagrama-de-casos-de-uso)
+  - [6.2 Histórias de Usuário](#62-histórias-de-usuário)
 - [7. Diagrama de componentes](#7-diagrama-de-componentes)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
@@ -49,17 +50,17 @@ Descrição do cenário onde o sistema deverá funcionar:
 17. O veterinário deverá examinar o animal e anotar em prontuário(ficha) suas observações.
 18. Dependendo da situação do animal este receberá uma receita.
 19. Dependendo da situação do animal, o veterinário pode solicitar exames complementares, como exames de sangue e radiografias. Esses exames devem ser registrados no prontuário do animal e uma agenda específica para exames deve ser gerenciada.
-20. O cliente pode solicitar o agendamento de horário.
+20. O cliente pode solicitar o agendamento de horário, respeitando a disponibilidade dos veterinários e o tipo de serviço solicitado.
 21. Um cliente pode desejar cancelar ou remarcar uma consulta previamente agendada. O sistema deve permitir que o atendente faça essa alteração na agenda.
 22. A ficha do animal deve conter alergias ou restrições alimentares que o animal possa ter, garantindo que o veterinário tenha essas informações no momento da consulta.
 23. O cliente pode solicitar a vacinação de seu pet.
-24. A clínica avisa os clientes quando um animal estiver próximo do prazo para tomar uma vacina de reforço ou realizar algum procedimento periódico.
+24. A clínica pode oferecer um programa de fidelidade com benefícios como descontos em consultas ou vacinas para clientes frequentes.
 25. A petshop pode marcar os animais com RFID.
 26. A petshop oferece serviços de banho e tosa.
 27. A petshop vende rações e medicamentos para cães e gatos.
-28. A petshop controla o estoque de medicamentos e rações usados na clínica. Quando o veterinário prescreve um medicamento ou ração especial, isso deve ser registrado e o estoque atualizado automaticamente.
-29. Cada animal deve ter um histórico detalhado de todas as consultas, exames, receitas e tratamentos realizados, com a possibilidade de o cliente acessar essas informações, se autorizado.
-30. Novos veterinários ou funcionários da clínica podem ser cadastrados, associando as especialidades e funções de cada um para facilitar o agendamento e a triagem de casos.
+28. Os medicamentos prescritos devem ser registrados em um sistema que controle a quantidade disponível no estoque.
+29. Cada animal terá um histórico de atendimentos, exames e tratamentos, que deve ser atualizado a cada visita e armazenado eletronicamente.
+30. A clínica pode estabelecer parcerias com pet shops para venda de produtos veterinários ou com laboratórios para exames complementares, facilitando o acesso dos clientes a serviços adicionais.
 
 
 ---
@@ -311,7 +312,13 @@ classDiagram
 ---
 # 6. Casos de uso
 
-## 6.1 Histórias de usuário
+
+## 6.1 Diagrama de Casos de Uso
+:bulb: **Dica** Situações de utilização  
+![Figura 1:](https://github.com/VitorSauzen/vitor_emanuel/blob/main/Diagrama-caso-uso.png)
+
+## 6.2 Histórias de Usuário
+
 
 ---
 # 7. Diagrama de componentes
