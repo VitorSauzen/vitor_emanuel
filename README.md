@@ -9,7 +9,7 @@
 - [5. Diagrama de classes](#5-diagrama-de-classes)
 - [6. Casos de uso](#6-casos-de-uso)
   - [6.1 Diagrama de Casos de Uso](#61-diagrama-de-casos-de-uso)
-  - [6.2Histórias de Usuário - Clínica Veterinária](#62histórias-de-usuário---clínica-veterinária)
+  - [6.2 Histórias de Usuário - Clínica Veterinária](#62-histórias-de-usuário---clínica-veterinária)
     - [1. Cadastro de Animais Permitidos](#1-cadastro-de-animais-permitidos)
     - [2. Cadastro de Clientes e Animais](#2-cadastro-de-clientes-e-animais)
     - [3. Informar Condições de Chegada do Animal](#3-informar-condições-de-chegada-do-animal)
@@ -40,37 +40,17 @@
     - [28. Controle de Estoque de Medicamentos](#28-controle-de-estoque-de-medicamentos)
     - [29. Histórico de Atendimento e Exames](#29-histórico-de-atendimento-e-exames)
     - [30. Parcerias com Pet Shops e Laboratórios](#30-parcerias-com-pet-shops-e-laboratórios)
-- [Histórias de Usuário - Clínica Veterinária](#histórias-de-usuário---clínica-veterinária)
-    - [1. Cadastro de Animais Permitidos](#1-cadastro-de-animais-permitidos-1)
-    - [2. Cadastro de Clientes e Animais](#2-cadastro-de-clientes-e-animais-1)
-    - [3. Informar Condições de Chegada do Animal](#3-informar-condições-de-chegada-do-animal-1)
-    - [4. Informar Tipo de Ração](#4-informar-tipo-de-ração-1)
-    - [5. Informar Hábitos do Animal](#5-informar-hábitos-do-animal-1)
-    - [6. Atendimento por Múltiplos Veterinários](#6-atendimento-por-múltiplos-veterinários-1)
-    - [7. Atendimentos Agendados](#7-atendimentos-agendados-1)
-    - [8. Ficha e Prontuário do Animal](#8-ficha-e-prontuário-do-animal-1)
-    - [9. Marcação de Horários Futuros](#9-marcação-de-horários-futuros-1)
-    - [10. Receita Gerada Após Atendimento](#10-receita-gerada-após-atendimento-1)
-    - [11. Atendimento por Atendente](#11-atendimento-por-atendente-1)
-    - [12. Verificação de Disponibilidade na Agenda](#12-verificação-de-disponibilidade-na-agenda-1)
-    - [13. Inserção em Fila de Espera](#13-inserção-em-fila-de-espera-1)
-    - [14. Encaminhamento para o Veterinário](#14-encaminhamento-para-o-veterinário-1)
-    - [15. Entrevista com o Dono do Animal](#15-entrevista-com-o-dono-do-animal-1)
-    - [16. Formulário de Entrevista](#16-formulário-de-entrevista-1)
-    - [17. Exame do Animal e Observações](#17-exame-do-animal-e-observações-1)
-    - [18. Emissão de Receita](#18-emissão-de-receita-1)
-    - [19. Solicitação de Exames Complementares](#19-solicitação-de-exames-complementares-1)
-    - [20. Agendamento de Horário](#20-agendamento-de-horário-1)
-    - [21. Cancelamento ou Remarcação de Consulta](#21-cancelamento-ou-remarcação-de-consulta-1)
-    - [22. Registro de Alergias ou Restrições Alimentares](#22-registro-de-alergias-ou-restrições-alimentares-1)
-    - [23. Solicitação de Vacinação](#23-solicitação-de-vacinação-1)
-    - [24. Programa de Fidelidade](#24-programa-de-fidelidade-1)
-    - [25. Identificação de Animais com RFID](#25-identificação-de-animais-com-rfid-1)
-    - [26. Serviços de Banho e Tosa](#26-serviços-de-banho-e-tosa-1)
-    - [27. Venda de Rações e Medicamentos](#27-venda-de-rações-e-medicamentos-1)
-    - [28. Controle de Estoque de Medicamentos](#28-controle-de-estoque-de-medicamentos-1)
-    - [29. Histórico de Atendimento e Exames](#29-histórico-de-atendimento-e-exames-1)
-    - [30. Parcerias com Pet Shops e Laboratórios](#30-parcerias-com-pet-shops-e-laboratórios-1)
+- [7. Diagrama de componentes](#7-diagrama-de-componentes)
+- [8. Diagrama de implantação](#8-diagrama-de-implantação)
+- [9. Protótipo de telas](#9-protótipo-de-telas)
+- [10. Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
+- [11. Pilha tecnológica](#11-pilha-tecnológica)
+- [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
+- [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
+- [14. Manutenção e instalação](#14-manutenção-e-instalação)
+- [15. Glossário](#15-glossário)
+- [16. Script SQL](#16-script-sql)
+  - [16.1 Script para criar as tabelas](#161-script-para-criar-as-tabelas)
   - [16.2 Scrip para inserir dados fictícios](#162-scrip-para-inserir-dados-fictícios)
 
 
@@ -316,7 +296,7 @@ classDiagram
 ## 6.1 Diagrama de Casos de Uso
 ![Figura 1: Diagrama de casos de uso](https://github.com/VitorSauzen/vitor_emanuel/blob/main/Diagrama_de_casos_de_uso.png)
 
-## 6.2Histórias de Usuário - Clínica Veterinária
+## 6.2 Histórias de Usuário - Clínica Veterinária
 :bulb: **Dica** Situações de utilização  
 
 ### 1. Cadastro de Animais Permitidos
@@ -327,303 +307,206 @@ classDiagram
 ```
 
 ### 2. Cadastro de Clientes e Animais
+```
 **Como** cliente,  
 **Eu quero** fazer o cadastro de meus dados pessoais e dos meus animais,  
 **Para** poder agendar consultas e utilizar os serviços da clínica.
+```
 
 ### 3. Informar Condições de Chegada do Animal
+```
 **Como** cliente,  
 **Eu quero** informar as condições em que meu animal chegou à clínica,  
 **Para** que o veterinário saiba como o animal estava ao chegar.
+```
 
 ### 4. Informar Tipo de Ração
+```
 **Como** cliente,  
 **Eu quero** informar o tipo de ração que meu animal consome,  
 **Para** garantir que o veterinário tenha essa informação no histórico do animal.
+```
 
 ### 5. Informar Hábitos do Animal
+```
 **Como** cliente,  
 **Eu quero** informar os hábitos do meu animal,  
 **Para** que o veterinário tenha uma visão completa do comportamento do pet.
+```
 
 ### 6. Atendimento por Múltiplos Veterinários
+```
 **Como** administrador da clínica,  
 **Eu quero** que um animal possa ser atendido por mais de um veterinário,  
 **Para** garantir uma avaliação completa do estado de saúde do pet.
+```
 
 ### 7. Atendimentos Agendados
+```
 **Como** administrador da clínica,  
 **Eu quero** organizar os atendimentos de acordo com a agenda do dia,  
 **Para** garantir uma gestão eficiente do tempo e evitar superlotação.
+```
 
 ### 8. Ficha e Prontuário do Animal
+```
 **Como** veterinário,  
 **Eu quero** criar uma ficha e um prontuário para cada animal atendido,  
 **Para** registrar o histórico médico e de saúde do animal.
+```
 
 ### 9. Marcação de Horários Futuros
+```
 **Como** cliente,  
 **Eu quero** marcar horários futuros de atendimento para meu animal,  
 **Para** garantir que ele seja atendido na data e horário mais convenientes.
+```
 
 ### 10. Receita Gerada Após Atendimento
+```
 **Como** veterinário,  
 **Eu quero** emitir uma receita para o animal após o atendimento,  
 **Para** prescrever medicamentos ou tratamentos necessários.
+```
 
 ### 11. Atendimento por Atendente
+```
 **Como** cliente,  
 **Eu quero** ser recebido por um atendente ao chegar à clínica,  
 **Para** ser orientado sobre o processo de consulta e atendimento.
+```
 
 ### 12. Verificação de Disponibilidade na Agenda
+```
 **Como** atendente,  
 **Eu quero** verificar se há vagas disponíveis na agenda dos veterinários,  
 **Para** encaixar novos atendimentos.
+```
 
 ### 13. Inserção em Fila de Espera
+```
 **Como** atendente,  
 **Eu quero** colocar clientes e seus animais na fila de espera,  
 **Para** organizar os atendimentos de acordo com a disponibilidade dos veterinários.
+```
 
 ### 14. Encaminhamento para o Veterinário
+```
 **Como** atendente,  
 **Eu quero** acompanhar o cliente e seu animal até o veterinário,  
 **Para** garantir que o processo de atendimento seja fluido e organizado.
+```
 
 ### 15. Entrevista com o Dono do Animal
+```
 **Como** veterinário,  
 **Eu quero** realizar uma entrevista com o dono do animal,  
 **Para** coletar informações importantes sobre o pet antes de iniciar o exame.
+```
 
 ### 16. Formulário de Entrevista
+```
 **Como** veterinário,  
 **Eu quero** registrar as informações da entrevista em um formulário,  
 **Para** documentar as respostas e usá-las no diagnóstico.
+```
 
 ### 17. Exame do Animal e Observações
+```
 **Como** veterinário,  
 **Eu quero** examinar o animal e anotar as observações no prontuário,  
 **Para** ter um registro claro das condições de saúde do pet.
+```
 
 ### 18. Emissão de Receita
+```
 **Como** veterinário,  
 **Eu quero** emitir uma receita após o atendimento,  
 **Para** prescrever os medicamentos ou tratamentos adequados para o animal.
+```
 
 ### 19. Solicitação de Exames Complementares
+```
 **Como** veterinário,  
 **Eu quero** solicitar exames complementares, como exames de sangue e radiografias,  
 **Para** ter um diagnóstico mais detalhado da condição do animal.
+```
 
 ### 20. Agendamento de Horário
+```
 **Como** cliente,  
 **Eu quero** agendar horários respeitando a disponibilidade dos veterinários,  
 **Para** garantir que meu pet seja atendido no momento ideal.
+```
 
 ### 21. Cancelamento ou Remarcação de Consulta
+```
 **Como** cliente,  
 **Eu quero** cancelar ou remarcar uma consulta previamente agendada,  
 **Para** ajustar o horário da consulta às minhas necessidades.
+```
 
 ### 22. Registro de Alergias ou Restrições Alimentares
+```
 **Como** veterinário,  
 **Eu quero** registrar alergias e restrições alimentares na ficha do animal,  
 **Para** evitar complicações durante o atendimento.
+```
 
 ### 23. Solicitação de Vacinação
+```
 **Como** cliente,  
 **Eu quero** solicitar a vacinação do meu animal,  
 **Para** garantir que ele receba as vacinas necessárias para sua saúde.
+```
 
 ### 24. Programa de Fidelidade
+```
 **Como** cliente frequente,  
 **Eu quero** participar de um programa de fidelidade,  
 **Para** obter descontos em consultas e vacinas.
+```
 
 ### 25. Identificação de Animais com RFID
+```
 **Como** pet shop,  
 **Eu quero** marcar os animais com RFID,  
 **Para** facilitar o controle de identificação e serviços prestados.
+```
 
 ### 26. Serviços de Banho e Tosa
+```
 **Como** cliente,  
 **Eu quero** agendar serviços de banho e tosa para o meu animal,  
 **Para** manter a higiene e aparência do meu pet.
+```
 
 ### 27. Venda de Rações e Medicamentos
+```
 **Como** pet shop,  
 **Eu quero** vender rações e medicamentos específicos para cães e gatos,  
 **Para** oferecer uma solução completa de saúde e alimentação.
+```
 
 ### 28. Controle de Estoque de Medicamentos
+```
 **Como** administrador da clínica,  
 **Eu quero** registrar a prescrição de medicamentos no sistema,  
 **Para** controlar o estoque disponível de forma eficiente.
+```
 
 ### 29. Histórico de Atendimento e Exames
+```
 **Como** veterinário,  
 **Eu quero** manter um histórico atualizado dos atendimentos e exames do animal,  
 **Para** garantir que todas as informações estejam disponíveis nas consultas futuras.
+```
 
 ### 30. Parcerias com Pet Shops e Laboratórios
+```
 **Como** administrador da clínica,  
 **Eu quero** estabelecer parcerias com pet shops e laboratórios,  
 **Para** facilitar o acesso dos clientes a produtos e exames complementares.
-
-
-# Histórias de Usuário - Clínica Veterinária
-
-### 1. Cadastro de Animais Permitidos
-**Como** uma clínica veterinária,  
-**Eu quero** atender apenas gatos e cachorros,  
-**Para** garantir que os serviços oferecidos sejam especializados para esses tipos de animais.
-
-### 2. Cadastro de Clientes e Animais
-**Como** cliente,  
-**Eu quero** fazer o cadastro de meus dados pessoais e dos meus animais,  
-**Para** poder agendar consultas e utilizar os serviços da clínica.
-
-### 3. Informar Condições de Chegada do Animal
-**Como** cliente,  
-**Eu quero** informar as condições em que meu animal chegou à clínica,  
-**Para** que o veterinário saiba como o animal estava ao chegar.
-
-### 4. Informar Tipo de Ração
-**Como** cliente,  
-**Eu quero** informar o tipo de ração que meu animal consome,  
-**Para** garantir que o veterinário tenha essa informação no histórico do animal.
-
-### 5. Informar Hábitos do Animal
-**Como** cliente,  
-**Eu quero** informar os hábitos do meu animal,  
-**Para** que o veterinário tenha uma visão completa do comportamento do pet.
-
-### 6. Atendimento por Múltiplos Veterinários
-**Como** administrador da clínica,  
-**Eu quero** que um animal possa ser atendido por mais de um veterinário,  
-**Para** garantir uma avaliação completa do estado de saúde do pet.
-
-### 7. Atendimentos Agendados
-**Como** administrador da clínica,  
-**Eu quero** organizar os atendimentos de acordo com a agenda do dia,  
-**Para** garantir uma gestão eficiente do tempo e evitar superlotação.
-
-### 8. Ficha e Prontuário do Animal
-**Como** veterinário,  
-**Eu quero** criar uma ficha e um prontuário para cada animal atendido,  
-**Para** registrar o histórico médico e de saúde do animal.
-
-### 9. Marcação de Horários Futuros
-**Como** cliente,  
-**Eu quero** marcar horários futuros de atendimento para meu animal,  
-**Para** garantir que ele seja atendido na data e horário mais convenientes.
-
-### 10. Receita Gerada Após Atendimento
-**Como** veterinário,  
-**Eu quero** emitir uma receita para o animal após o atendimento,  
-**Para** prescrever medicamentos ou tratamentos necessários.
-
-### 11. Atendimento por Atendente
-**Como** cliente,  
-**Eu quero** ser recebido por um atendente ao chegar à clínica,  
-**Para** ser orientado sobre o processo de consulta e atendimento.
-
-### 12. Verificação de Disponibilidade na Agenda
-**Como** atendente,  
-**Eu quero** verificar se há vagas disponíveis na agenda dos veterinários,  
-**Para** encaixar novos atendimentos.
-
-### 13. Inserção em Fila de Espera
-**Como** atendente,  
-**Eu quero** colocar clientes e seus animais na fila de espera,  
-**Para** organizar os atendimentos de acordo com a disponibilidade dos veterinários.
-
-### 14. Encaminhamento para o Veterinário
-**Como** atendente,  
-**Eu quero** acompanhar o cliente e seu animal até o veterinário,  
-**Para** garantir que o processo de atendimento seja fluido e organizado.
-
-### 15. Entrevista com o Dono do Animal
-**Como** veterinário,  
-**Eu quero** realizar uma entrevista com o dono do animal,  
-**Para** coletar informações importantes sobre o pet antes de iniciar o exame.
-
-### 16. Formulário de Entrevista
-**Como** veterinário,  
-**Eu quero** registrar as informações da entrevista em um formulário,  
-**Para** documentar as respostas e usá-las no diagnóstico.
-
-### 17. Exame do Animal e Observações
-**Como** veterinário,  
-**Eu quero** examinar o animal e anotar as observações no prontuário,  
-**Para** ter um registro claro das condições de saúde do pet.
-
-### 18. Emissão de Receita
-**Como** veterinário,  
-**Eu quero** emitir uma receita após o atendimento,  
-**Para** prescrever os medicamentos ou tratamentos adequados para o animal.
-
-### 19. Solicitação de Exames Complementares
-**Como** veterinário,  
-**Eu quero** solicitar exames complementares, como exames de sangue e radiografias,  
-**Para** ter um diagnóstico mais detalhado da condição do animal.
-
-### 20. Agendamento de Horário
-**Como** cliente,  
-**Eu quero** agendar horários respeitando a disponibilidade dos veterinários,  
-**Para** garantir que meu pet seja atendido no momento ideal.
-
-### 21. Cancelamento ou Remarcação de Consulta
-**Como** cliente,  
-**Eu quero** cancelar ou remarcar uma consulta previamente agendada,  
-**Para** ajustar o horário da consulta às minhas necessidades.
-
-### 22. Registro de Alergias ou Restrições Alimentares
-**Como** veterinário,  
-**Eu quero** registrar alergias e restrições alimentares na ficha do animal,  
-**Para** evitar complicações durante o atendimento.
-
-### 23. Solicitação de Vacinação
-**Como** cliente,  
-**Eu quero** solicitar a vacinação do meu animal,  
-**Para** garantir que ele receba as vacinas necessárias para sua saúde.
-
-### 24. Programa de Fidelidade
-**Como** cliente frequente,  
-**Eu quero** participar de um programa de fidelidade,  
-**Para** obter descontos em consultas e vacinas.
-
-### 25. Identificação de Animais com RFID
-**Como** pet shop,  
-**Eu quero** marcar os animais com RFID,  
-**Para** facilitar o controle de identificação e serviços prestados.
-
-### 26. Serviços de Banho e Tosa
-**Como** cliente,  
-**Eu quero** agendar serviços de banho e tosa para o meu animal,  
-**Para** manter a higiene e aparência do meu pet.
-
-### 27. Venda de Rações e Medicamentos
-**Como** pet shop,  
-**Eu quero** vender rações e medicamentos específicos para cães e gatos,  
-**Para** oferecer uma solução completa de saúde e alimentação.
-
-### 28. Controle de Estoque de Medicamentos
-**Como** administrador da clínica,  
-**Eu quero** registrar a prescrição de medicamentos no sistema,  
-**Para** controlar o estoque disponível de forma eficiente.
-
-### 29. Histórico de Atendimento e Exames
-**Como** veterinário,  
-**Eu quero** manter um histórico atualizado dos atendimentos e exames do animal,  
-**Para** garantir que todas as informações estejam disponíveis nas consultas futuras.
-
-### 30. Parcerias com Pet Shops e Laboratórios
-**Como** administrador da clínica,  
-**Eu quero** estabelecer parcerias com pet shops e laboratórios,  
-**Para** facilitar o acesso dos clientes a produtos e exames complementares.
-
 ```
 
 ---
