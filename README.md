@@ -537,44 +537,44 @@ classDiagram
 ---
 # 9. Protótipo de telas
 ## 9.1. Tela Menu
-![Figura : Tela Menu](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_menu.png)
+![Figura : Tela Menu](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_menu.png)
 
 ## 9.2. Telas de Cadastro
 ### 9.2.1 Cadastro de 
 ![Figura : cadastro de agenda](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/src/images/tela_cadastro_agenda.png)
 ### 9.2.2 Cadastro de 
-![Figura : cadastro de animal](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_animal.png)
+![Figura : cadastro de animal](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_animal.png)
 ### 9.2.3 Cadastro de 
-![Figura : cadastro de atendente](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_atendente.png)
+![Figura : cadastro de atendente](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_atendente.png)
 ### 9.2.4 Cadastro de 
-![Figura : cadastro de atendimento](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_atendimento.png)
+![Figura : cadastro de atendimento](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_atendimento.png)
 ### 9.2.5 Cadastro de 
-![Figura : cadastro de cliente](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_cliente.png)
+![Figura : cadastro de cliente](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_cliente.png)
 ### 9.2.6 Cadastro de 
-![Figura : cadastro de exame](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_exame.png)
+![Figura : cadastro de exame](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_exame.png)
 ### 9.2.7 Cadastro de 
-![Figura : cadastro de ficha](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_ficha.png)
+![Figura : cadastro de ficha](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_ficha.png)
 ### 9.2.8 Cadastro de 
-![Figura : cadastro de parceria](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_parceria.png)
+![Figura : cadastro de parceria](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_parceria.png)
 ### 9.2.9 Cadastro de 
-![Figura : cadastro de produto](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_produto.png)
+![Figura : cadastro de produto](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_produto.png)
 ### 9.2.10 Cadastro de 
-![Figura : cadastro de servico](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_servico.png)
+![Figura : cadastro de servico](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_servico.png)
 ### 9.2.11 Cadastro de 
-![Figura : cadastro de vacina](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_vacina.png)
+![Figura : cadastro de vacina](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_vacina.png)
 ### 9.2.12 Cadastro de 
-![Figura : cadastro de venda](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_venda.png)
+![Figura : cadastro de venda](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_venda.png)
 ### 9.2.13 Cadastro de 
-![Figura : cadastro de veterinario](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_cadastro_veterinario.png)
+![Figura : cadastro de veterinario](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_veterinario.png)
 
 ## 9.3 Telas de Gráficos
 ### 9.3.1 Gráfico de Estoque
-![Figura : grafico de estoque](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_grafico_estoque.png)
+![Figura : grafico de estoque](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_grafico_estoque.png)
 ### 9.3.1 Gráfico de Vendas
-![Figura : grafico de vendas](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_grafico_vendas.png)
+![Figura : grafico de vendas](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_grafico_vendas.png)
 
 ## 9.4 Tela de Dashboard
-![Figura : dashboard](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/tela_dashboard.png)
+![Figura : dashboard](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_dashboard.png)
 
 ---
 # 10. Diagrama de navegação de telas
