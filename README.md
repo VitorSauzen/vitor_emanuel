@@ -313,7 +313,7 @@ classDiagram
 # 6. Casos de uso
 
 ## 6.1 Diagrama de Casos de Uso
-![Figura 1: Diagrama de casos de uso](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_de_casos_de_uso.png)
+![Figura 1: Diagrama de casos de uso](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/Diagrama_de_casos_de_uso.png)
 
 ## 6.2 Histórias de Usuário - Clínica Veterinária
 :bulb: **Dica** Situações de utilização  
