@@ -43,6 +43,25 @@
 - [7. Diagrama de componentes](#7-diagrama-de-componentes)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
+  - [9.1. Tela Menu](#91-tela-menu)
+  - [9.2. Telas de Cadastro](#92-telas-de-cadastro)
+    - [9.2.1 Cadastro de](#921-cadastro-de)
+    - [9.2.2 Cadastro de](#922-cadastro-de)
+    - [9.2.3 Cadastro de](#923-cadastro-de)
+    - [9.2.4 Cadastro de](#924-cadastro-de)
+    - [9.2.5 Cadastro de](#925-cadastro-de)
+    - [9.2.6 Cadastro de](#926-cadastro-de)
+    - [9.2.7 Cadastro de](#927-cadastro-de)
+    - [9.2.8 Cadastro de](#928-cadastro-de)
+    - [9.2.9 Cadastro de](#929-cadastro-de)
+    - [9.2.10 Cadastro de](#9210-cadastro-de)
+    - [9.2.11 Cadastro de](#9211-cadastro-de)
+    - [9.2.12 Cadastro de](#9212-cadastro-de)
+    - [9.2.13 Cadastro de](#9213-cadastro-de)
+  - [9.3 Telas de Gráficos](#93-telas-de-gráficos)
+    - [9.3.1 Gráfico de Estoque](#931-gráfico-de-estoque)
+    - [9.3.1 Gráfico de Estoque](#931-gráfico-de-estoque-1)
+  - [9.4 Tela de Dashboard](#94-tela-de-dashboard)
 - [10. Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
 - [11. Pilha tecnológica](#11-pilha-tecnológica)
 - [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
@@ -294,7 +313,7 @@ classDiagram
 # 6. Casos de uso
 
 ## 6.1 Diagrama de Casos de Uso
-![Figura 1: Diagrama de casos de uso](https://github.com/VitorSauzen/vitor_emanuel/blob/main/Diagrama_de_casos_de_uso.png)
+![Figura 1: Diagrama de casos de uso](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/Diagrama_de_casos_de_uso.png)
 
 ## 6.2 Histórias de Usuário - Clínica Veterinária
 :bulb: **Dica** Situações de utilização  
@@ -517,6 +536,45 @@ classDiagram
 
 ---
 # 9. Protótipo de telas
+## 9.1. Tela Menu
+![Figura : Tela Menu]()
+
+## 9.2. Telas de Cadastro
+### 9.2.1 Cadastro de 
+![Figura : cadastro de Atendente]()
+### 9.2.2 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.3 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.4 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.5 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.6 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.7 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.8 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.9 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.10 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.11 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.12 Cadastro de 
+![Figura : cadastro de ]()
+### 9.2.13 Cadastro de 
+![Figura : cadastro de ]()
+
+## 9.3 Telas de Gráficos
+### 9.3.1 Gráfico de Estoque
+![Figura : grafico de ]()
+### 9.3.1 Gráfico de Estoque
+![Figura : grafico de ]()
+
+## 9.4 Tela de Dashboard
+![Figura : dashboard]()
 
 ---
 # 10. Diagrama de navegação de telas
