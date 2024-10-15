@@ -41,23 +41,25 @@
     - [29. Histórico de Atendimento e Exames](#29-histórico-de-atendimento-e-exames)
     - [30. Parcerias com Pet Shops e Laboratórios](#30-parcerias-com-pet-shops-e-laboratórios)
 - [7. Diagrama de componentes](#7-diagrama-de-componentes)
+  - [](#)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
+  - [](#-1)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
   - [9.1. Tela Menu](#91-tela-menu)
   - [9.2. Telas de Cadastro](#92-telas-de-cadastro)
-    - [9.2.1 Cadastro de](#921-cadastro-de)
-    - [9.2.2 Cadastro de](#922-cadastro-de)
-    - [9.2.3 Cadastro de](#923-cadastro-de)
-    - [9.2.4 Cadastro de](#924-cadastro-de)
-    - [9.2.5 Cadastro de](#925-cadastro-de)
-    - [9.2.6 Cadastro de](#926-cadastro-de)
-    - [9.2.7 Cadastro de](#927-cadastro-de)
-    - [9.2.8 Cadastro de](#928-cadastro-de)
-    - [9.2.9 Cadastro de](#929-cadastro-de)
-    - [9.2.10 Cadastro de](#9210-cadastro-de)
-    - [9.2.11 Cadastro de](#9211-cadastro-de)
-    - [9.2.12 Cadastro de](#9212-cadastro-de)
-    - [9.2.13 Cadastro de](#9213-cadastro-de)
+    - [9.2.1 Cadastro de Agenda](#921-cadastro-de-agenda)
+    - [9.2.2 Cadastro de Animal](#922-cadastro-de-animal)
+    - [9.2.3 Cadastro de Atendente](#923-cadastro-de-atendente)
+    - [9.2.4 Cadastro de Atendimento](#924-cadastro-de-atendimento)
+    - [9.2.5 Cadastro de Cliente](#925-cadastro-de-cliente)
+    - [9.2.6 Cadastro de Exame](#926-cadastro-de-exame)
+    - [9.2.7 Cadastro de Ficha](#927-cadastro-de-ficha)
+    - [9.2.8 Cadastro de Parceria](#928-cadastro-de-parceria)
+    - [9.2.9 Cadastro de Produto](#929-cadastro-de-produto)
+    - [9.2.10 Cadastro de Servico](#9210-cadastro-de-servico)
+    - [9.2.11 Cadastro de Vacina](#9211-cadastro-de-vacina)
+    - [9.2.12 Cadastro de Venda](#9212-cadastro-de-venda)
+    - [9.2.13 Cadastro de Veterinario](#9213-cadastro-de-veterinario)
   - [9.3 Telas de Gráficos](#93-telas-de-gráficos)
     - [9.3.1 Gráfico de Estoque](#931-gráfico-de-estoque)
     - [9.3.1 Gráfico de Vendas](#931-gráfico-de-vendas)
@@ -313,7 +315,7 @@ classDiagram
 # 6. Casos de uso
 
 ## 6.1 Diagrama de Casos de Uso
-![Figura 1: Diagrama de casos de uso](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/Diagrama_de_casos_de_uso.png)
+![Figura 1: Diagrama de casos de uso](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_casos_uso.png)
 
 ## 6.2 Histórias de Usuário - Clínica Veterinária
 :bulb: **Dica** Situações de utilização  
@@ -530,41 +532,41 @@ classDiagram
 
 ---
 # 7. Diagrama de componentes
-
+![Figura : Diagrama de Componentes](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_componente.png)
 ---
 # 8. Diagrama de implantação
-
+![Figura : Diagrama de Implantação](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_implantacao.png)
 ---
 # 9. Protótipo de telas
 ## 9.1. Tela Menu
 ![Figura : Tela Menu](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_menu.png)
 
 ## 9.2. Telas de Cadastro
-### 9.2.1 Cadastro de 
-![Figura : cadastro de agenda](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/src/images/tela_cadastro_agenda.png)
-### 9.2.2 Cadastro de 
+### 9.2.1 Cadastro de Agenda
+![Figura : cadastro de agenda](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_agenda.png)
+### 9.2.2 Cadastro de Animal
 ![Figura : cadastro de animal](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_animal.png)
-### 9.2.3 Cadastro de 
+### 9.2.3 Cadastro de Atendente
 ![Figura : cadastro de atendente](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_atendente.png)
-### 9.2.4 Cadastro de 
+### 9.2.4 Cadastro de Atendimento
 ![Figura : cadastro de atendimento](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_atendimento.png)
-### 9.2.5 Cadastro de 
+### 9.2.5 Cadastro de Cliente
 ![Figura : cadastro de cliente](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_cliente.png)
-### 9.2.6 Cadastro de 
+### 9.2.6 Cadastro de Exame
 ![Figura : cadastro de exame](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_exame.png)
-### 9.2.7 Cadastro de 
+### 9.2.7 Cadastro de Ficha
 ![Figura : cadastro de ficha](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_ficha.png)
-### 9.2.8 Cadastro de 
+### 9.2.8 Cadastro de Parceria
 ![Figura : cadastro de parceria](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_parceria.png)
-### 9.2.9 Cadastro de 
+### 9.2.9 Cadastro de Produto
 ![Figura : cadastro de produto](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_produto.png)
-### 9.2.10 Cadastro de 
+### 9.2.10 Cadastro de Servico
 ![Figura : cadastro de servico](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_servico.png)
-### 9.2.11 Cadastro de 
+### 9.2.11 Cadastro de Vacina
 ![Figura : cadastro de vacina](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_vacina.png)
-### 9.2.12 Cadastro de 
+### 9.2.12 Cadastro de Venda
 ![Figura : cadastro de venda](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_venda.png)
-### 9.2.13 Cadastro de 
+### 9.2.13 Cadastro de Veterinario
 ![Figura : cadastro de veterinario](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_veterinario.png)
 
 ## 9.3 Telas de Gráficos
