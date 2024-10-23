@@ -5,6 +5,7 @@
 - [1. Introdução](#1-introdução)
 - [2. Descrição do negócio](#2-descrição-do-negócio)
 - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
+  - [3.1. Descrição do sistema do ponto de vista do usuário final](#31-descrição-do-sistema-do-ponto-de-vista-do-usuário-final)
 - [4. Diagrama ER](#4-diagrama-er)
 - [5. Diagrama de classes](#5-diagrama-de-classes)
 - [6. Casos de uso](#6-casos-de-uso)
@@ -67,9 +68,28 @@
 - [10. Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
 - [11. Pilha tecnológica](#11-pilha-tecnológica)
 - [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
+  - [12.1. Lado Cliente:](#121-lado-cliente)
+    - [12.1.1. Dispositivos:](#1211-dispositivos)
+    - [12.1.2. Navegadores Web:](#1212-navegadores-web)
+    - [12.1.3. Interface de Usuário:](#1213-interface-de-usuário)
+    - [12.1.4. Autenticação:](#1214-autenticação)
+    - [12.1.5. Funcionalidades:](#1215-funcionalidades)
+  - [12.2. Lado Servidor](#122-lado-servidor)
+    - [12.2.1. Servidor de Aplicação:](#1221-servidor-de-aplicação)
+    - [12.2.2. Servidor de Banco de Dados:](#1222-servidor-de-banco-de-dados)
+    - [12.2.3. Servidor Web:](#1223-servidor-web)
+    - [12.2.4. API REST:](#1224-api-rest)
+    - [12.2.5. Funcionalidades:](#1225-funcionalidades)
 - [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
-- [14. Manutenção e instalação](#14-manutenção-e-instalação)
-- [15. Glossário](#15-glossário)
+  - [13.1. Lado cliente](#131-lado-cliente)
+  - [13.1. Lado Servidor](#131-lado-servidor)
+- [14. Instalação, manutenção e novas funcionalidades](#14-instalação-manutenção-e-novas-funcionalidades)
+  - [14.1. Instalação](#141-instalação)
+  - [14.2. Manutenção](#142-manutenção)
+  - [14.3. Novas Funcionalidades](#143-novas-funcionalidades)
+- [15. Treinamento](#15-treinamento)
+  - [15.1. Treinamento dos Usuários](#151-treinamento-dos-usuários)
+  - [15.2. Treinamento do administrador do sistemas](#152-treinamento-do-administrador-do-sistemas)
 - [16. Script SQL](#16-script-sql)
   - [16.1 Script para criar as tabelas](#161-script-para-criar-as-tabelas)
   - [16.2 Scrip para inserir dados fictícios](#162-scrip-para-inserir-dados-fictícios)
@@ -116,7 +136,7 @@ Descrição do cenário onde o sistema deverá funcionar:
 
 ---
 # 3. Visão geral do sistema
-Descrição do sistema e suas relações
+## 3.1. Descrição do sistema do ponto de vista do usuário final
 
 ---
 # 4. Diagrama ER
@@ -580,21 +600,232 @@ classDiagram
 
 ---
 # 10. Diagrama de navegação de telas
+```mermaid
+graph TD
+    A[Login] --> B[Menu]
+    B -->|Clique no menu lateral| C[Cadastros]
+    B -->|Clique no dashboard| D[Dashboard]
+    B -->|Clique em gráficos| E[Gráficos]
+    
+    C --> F[Cadastro de Agenda]
+    C --> G[Cadastro de Animal]
+    C --> H[Cadastro de Atendente]
+    C --> I[Cadastro de Atendimento]
+    C --> J[Cadastro de Cliente]
+    C --> K[Cadastro de Exame]
+    C --> L[Cadastro de Ficha]
+    C --> M[Cadastro de Parceria]
+    C --> N[Cadastro de Produto]
+    C --> O[Cadastro de Servico]
+    C --> P[Cadastro de Vacina]
+    C --> Q[Cadastro de Venda]
+    C --> R[Cadastro de Veterinario]
+    
+    E --> S[Gráfico de Estoque]
+    E --> T[Gráfico de Vendas]
 
+```
 ---
 # 11. Pilha tecnológica
+```mermaid
+graph TD
+    subgraph Frontend
+        A1[HTML5]
+        A2[CSS3]
+        A3[JavaScript]
+        A4[React]
+    end
 
+    subgraph Backend
+        B1[Node.js]
+        B2[Express.js]
+        B3[REST API]
+        B4[JWT Authentication]
+    end
+
+    subgraph Database
+        C1[MongoDB]
+        C2[MySQL]
+    end
+
+    subgraph Infrastructure
+        D1[Docker]
+        D2[NGINX]
+        D3[AWS EC2]
+        D4[CI/CD - GitHub Actions]
+    end
+
+    subgraph APIs
+        E1[External API for RFID]
+        E2[Payment Gateway API]
+    end
+
+    A1 --> A2 --> A3 --> A4
+    A4 --> B1
+    B1 --> B2 --> B3 --> B4
+    B1 --> C1
+    B1 --> C2
+    B1 --> D1
+    D1 --> D2 --> D3 --> D4
+    B1 --> E1
+    B1 --> E2
+
+```
 ---
 # 12. Requisitos de sistemas
 
+## 12.1. Lado Cliente:
+### 12.1.1. Dispositivos: 
+   - O cliente acessa o sistema via PCs, tablets ou celulares.
+   
+### 12.1.2. Navegadores Web: 
+   - O sistema é acessível por meio de navegadores como Chrome, Firefox e Edge.
+
+### 12.1.3. Interface de Usuário: 
+   - A interface é construída com React.js, garantindo a interação do cliente com o sistema.
+
+### 12.1.4. Autenticação: 
+   - O usuário deve se autenticar via login.
+
+### 12.1.5. Funcionalidades:
+   - Notificações de vacinas/procedimentos.
+   - Agendamento de consultas e exames.
+   - Acesso ao histórico do animal.
+   - Preenchimento de formulários de cadastro, atendimentos e exames.
+   - Marcação e cancelamento de consultas.
+
+## 12.2. Lado Servidor
+### 12.2.1. Servidor de Aplicação:
+   - O Node.js é responsável por executar a aplicação.
+
+### 12.2.2. Servidor de Banco de Dados:
+   - MongoDB e MySQL são usados para armazenar os dados da clínica.
+
+### 12.2.3. Servidor Web:
+   - NGINX serve o conteúdo estático e redireciona as requisições para o backend.
+
+### 12.2.4. API REST:
+   - A API baseada em Express.js gerencia as requisições e responde ao cliente.
+
+### 12.2.5. Funcionalidades:
+   - Autenticação JWT: Garante que o usuário esteja autenticado para acessar o sistema.
+   - Gestão de Usuários e Permissões: Controle de quem pode acessar cada funcionalidade.
+   - Gestão de Agenda: Consultas, exames e controle de horários.
+   - Gestão de Estoque: Atualização automática do estoque quando produtos são vendidos ou prescritos.
+   - Cadastro de Animais e Veterinários: Registro de novos pacientes e profissionais.
+   - Prontuário e Ficha Médica: Registro das informações de saúde dos animais.
+   - Controle de Exames Complementares: Exames como raio-X e sangue.
+   - Emissão de Receitas: Prescrição de medicamentos.
+   - Backup e Recuperação: Sistema de backup de dados.
+   - Integração com Pagamentos: Sistema de pagamento e emissão de recibos.
+   - Monitoramento e Logs: Registro de atividades e eventos no sistema.
+
+```mermaid
+graph TD
+    subgraph Lado Cliente
+        A1[Dispositivos dos Usuários]
+        A2[Navegadores Web]
+        A3[Interface de Usuário]
+        A4[Autenticação de Usuário]
+        A5[Notificações de Vacinas/Procedimentos]
+        A6[Agendamento de Consultas]
+        A7[Acesso ao Histórico do Animal]
+        A8[Interação com Formulários]
+        A9[Marcação e Cancelamento de Consultas]
+    end
+
+    subgraph Lado Servidor
+        B1[Servidor de Aplicação]
+        B2[Servidor de Banco de Dados]
+        B3[Servidor Web]
+        B4[API REST]
+        B5[Autenticação JWT]
+        B6[Gestão de Usuários e Permissões]
+        B7[Gestão de Agenda]
+        B8[Gestão de Estoque]
+        B9[Cadastro de Animais e Veterinários]
+        B10[Registro de Prontuário e Ficha Médica]
+        B11[Controle de Exames Complementares]
+        B12[Emissão de Receitas e Prescrições]
+        B13[Atualização de Estoque Automática]
+        B14[Backup e Recuperação de Dados]
+        B15[Integração com Pagamentos]
+        B16[Monitoramento e Logs de Atividade]
+    end
+
+    %% Conexões entre Cliente e Servidor
+
+    A1 --> A2
+    A2 --> A3
+    A3 --> B4
+    A4 --> B5
+    A6 --> B7
+    A7 --> B10
+    A8 --> B9
+    A9 --> B7
+    A5 --> B7
+
+    %% Conexões entre componentes do servidor
+    B1 --> B4
+    B1 --> B3
+    B4 --> B2
+    B4 --> B5
+    B4 --> B6
+    B4 --> B7
+    B4 --> B9
+    B4 --> B8
+    B4 --> B10
+    B4 --> B11
+    B4 --> B12
+    B8 --> B13
+    B2 --> B14
+    B4 --> B15
+    B4 --> B16
+```
+
 ---
 # 13. Considerações sobre segurança
+## 13.1. Lado cliente
+> Regras de senha
+- Captcha, quantidade mínima de caracteres, caracteres especiais, etc.
+- Autenticação de 2 fatores
+- Recuperação de senha com email
+
+> Política de segurança
+- Anti vírus
+
+## 13.1. Lado Servidor
+> Linux
+
+> Política de backup
+- 1x todo fim de expediente
+
+> O administrador do sistema não acessa dados do usuário
+
 
 ---
-# 14. Manutenção e instalação
+# 14. Instalação, manutenção e novas funcionalidades
+## 14.1. Instalação
+> Definir regras de instalação
+
+## 14.2. Manutenção
+> Definir regras de manutenção
+
+## 14.3. Novas Funcionalidades
+- coisas a serem feitas e não serem feitas
+- formalização do pedido
+- cliente não dá palpite em beleza de tecnológica
+- Decidir sobre 3 critérios
+    a) Equipe tem tempo?
+    b) É economicamente viável?
+    c) É tecnológicamente viável?
+
 
 ---
-# 15. Glossário
+# 15. Treinamento
+## 15.1. Treinamento dos Usuários
+
+## 15.2. Treinamento do administrador do sistemas
 
 ---
 # 16. Script SQL
