@@ -1,4 +1,6 @@
+
 # Vitor_Emanuel
+
 ---
 
 - [Vitor\_Emanuel](#vitor_emanuel)
@@ -21,7 +23,7 @@
     - [8. Ficha e Prontuário do Animal](#8-ficha-e-prontuário-do-animal)
     - [9. Marcação de Horários Futuros](#9-marcação-de-horários-futuros)
     - [10. Receita Gerada Após Atendimento](#10-receita-gerada-após-atendimento)
-    - [11. Atendimento por Atendente](#11-atendimento-por-atendente)
+    - [11.2. Atendimento por Atendente](#112-atendimento-por-atendente)
     - [12. Verificação de Disponibilidade na Agenda](#12-verificação-de-disponibilidade-na-agenda)
     - [13. Inserção em Fila de Espera](#13-inserção-em-fila-de-espera)
     - [14. Encaminhamento para o Veterinário](#14-encaminhamento-para-o-veterinário)
@@ -42,9 +44,7 @@
     - [29. Histórico de Atendimento e Exames](#29-histórico-de-atendimento-e-exames)
     - [30. Parcerias com Pet Shops e Laboratórios](#30-parcerias-com-pet-shops-e-laboratórios)
 - [7. Diagrama de componentes](#7-diagrama-de-componentes)
-  - [](#)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
-  - [](#-1)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
   - [9.1. Tela Menu](#91-tela-menu)
   - [9.2. Telas de Cadastro](#92-telas-de-cadastro)
@@ -67,29 +67,42 @@
   - [9.4 Tela de Dashboard](#94-tela-de-dashboard)
 - [10. Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
 - [11. Pilha tecnológica](#11-pilha-tecnológica)
+  - [11.1. Gráfico da Pilha](#111-gráfico-da-pilha)
+  - [11.2. Detalhamento das Camadas da Pilha](#112-detalhamento-das-camadas-da-pilha)
+    - [11.2.1 **Linux** (Sistema Operacional):](#1121-linux-sistema-operacional)
+    - [11.2.2. **Apache (Servidor Web)**:](#1122-apache-servidor-web)
+    - [11.2.3. **Back-End (PHP - ScriptCase)**:](#1123-back-end-php---scriptcase)
+    - [11.2.4. **Banco de Dados (MySQL)**:](#1124-banco-de-dados-mysql)
+    - [11.2.5. **Front-End (HTML, CSS, Bootstrap, JavaScript)**:](#1125-front-end-html-css-bootstrap-javascript)
 - [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
-  - [12.1. Lado Cliente:](#121-lado-cliente)
+  - [12.1. Requisitos do Lado Cliente](#121-requisitos-do-lado-cliente)
     - [12.1.1. Dispositivos:](#1211-dispositivos)
     - [12.1.2. Navegadores Web:](#1212-navegadores-web)
     - [12.1.3. Interface de Usuário:](#1213-interface-de-usuário)
     - [12.1.4. Autenticação:](#1214-autenticação)
-    - [12.1.5. Funcionalidades:](#1215-funcionalidades)
-  - [12.2. Lado Servidor](#122-lado-servidor)
+    - [12.1.5. Funcionalidades Disponíveis:](#1215-funcionalidades-disponíveis)
+  - [12.2. Requisitos do Lado Servidor](#122-requisitos-do-lado-servidor)
     - [12.2.1. Servidor de Aplicação:](#1221-servidor-de-aplicação)
     - [12.2.2. Servidor de Banco de Dados:](#1222-servidor-de-banco-de-dados)
     - [12.2.3. Servidor Web:](#1223-servidor-web)
     - [12.2.4. API REST:](#1224-api-rest)
-    - [12.2.5. Funcionalidades:](#1225-funcionalidades)
+    - [12.2.5. Funcionalidades do Servidor:](#1225-funcionalidades-do-servidor)
 - [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
-  - [13.1. Lado cliente](#131-lado-cliente)
-  - [13.1. Lado Servidor](#131-lado-servidor)
-- [14. Instalação, manutenção e novas funcionalidades](#14-instalação-manutenção-e-novas-funcionalidades)
+  - [13.1. Lado Cliente](#131-lado-cliente)
+    - [Regras de Senha](#regras-de-senha)
+    - [Política de Segurança](#política-de-segurança)
+  - [13.2. Lado Servidor](#132-lado-servidor)
+    - [Sistema Operacional](#sistema-operacional)
+    - [Política de Backup](#política-de-backup)
+    - [Políticas de Acesso e Privacidade](#políticas-de-acesso-e-privacidade)
+    - [Medidas de Segurança Adicionais](#medidas-de-segurança-adicionais)
+- [14. Instalação, Manutenção e Novas Funcionalidades](#14-instalação-manutenção-e-novas-funcionalidades)
   - [14.1. Instalação](#141-instalação)
   - [14.2. Manutenção](#142-manutenção)
   - [14.3. Novas Funcionalidades](#143-novas-funcionalidades)
 - [15. Treinamento](#15-treinamento)
   - [15.1. Treinamento dos Usuários](#151-treinamento-dos-usuários)
-  - [15.2. Treinamento do administrador do sistemas](#152-treinamento-do-administrador-do-sistemas)
+  - [15.2. Treinamento do Administrador do Sistema](#152-treinamento-do-administrador-do-sistema)
 - [16. Script SQL](#16-script-sql)
   - [16.1 Script para criar as tabelas](#161-script-para-criar-as-tabelas)
   - [16.2 Scrip para inserir dados fictícios](#162-scrip-para-inserir-dados-fictícios)
@@ -97,10 +110,16 @@
 
 # 1. Introdução
 
+[(voltar ao topo)](#vitor_emanuel)
+
 O projeto a seguir apresenta um sistema desenvolvido para uma petshop. A empresa é considerada uma microempresa e iniciou as atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadra, desta forma, os proprietários decidiram desenvolver uma solução própria. Esta solução é detalhada a seguir
 
 ---
+
 # 2. Descrição do negócio
+
+[(voltar ao topo)](#vitor_emanuel)
+
 Descrição do cenário onde o sistema deverá funcionar:
 1. Uma clínica veterinária atende apenas os animais: gatos e cachorros.
 2. Os clientes devem fazer um cadastro de si e dos animais.
@@ -135,11 +154,36 @@ Descrição do cenário onde o sistema deverá funcionar:
 
 
 ---
+
 # 3. Visão geral do sistema
+
+[(voltar ao topo)](#vitor_emanuel)
+
+O sistema desenvolvido para a clínica veterinária tem como objetivo otimizar e gerenciar o atendimento aos animais de forma eficiente, proporcionando uma experiência fluida tanto para os usuários quanto para os atendentes. 
+
 ## 3.1. Descrição do sistema do ponto de vista do usuário final
 
+Para o usuário final, que pode ser um atendente, veterinário ou cliente, o sistema oferece uma interface amigável e intuitiva. As principais funcionalidades incluem:
+
+- **Cadastro de Clientes e Animais**: Usuários podem cadastrar facilmente informações sobre clientes e seus animais, garantindo que todos os dados necessários estejam acessíveis durante o atendimento.
+  
+- **Agendamento de Consultas e Exames**: O sistema permite que os usuários agendem consultas e exames com veterinários, garantindo que as informações de disponibilidade estejam sempre atualizadas.
+
+- **Gerenciamento de Atendimento**: Os atendentes podem registrar o histórico de atendimentos, emitir receitas e gerenciar fichas médicas de cada animal, facilitando o acompanhamento do tratamento.
+
+- **Notificações e Lembretes**: O sistema envia notificações automáticas aos clientes sobre vacinas e procedimentos, melhorando a comunicação e o cuidado com os animais.
+
+- **Relatórios e Análises**: Usuários têm acesso a relatórios de vendas, estoque e gráficos que ajudam a visualizar o desempenho da clínica e a tomar decisões informadas.
+
+- **Segurança e Acesso**: A autenticação é simples e segura, garantindo que apenas usuários autorizados tenham acesso às informações sensíveis.
+
+Em resumo, o sistema proporciona uma solução integrada que melhora a eficiência operacional da clínica veterinária, garante a segurança dos dados e oferece um atendimento de qualidade aos clientes e seus animais.
+
 ---
+
 # 4. Diagrama ER
+
+[(voltar ao topo)](#vitor_emanuel)
 
 ```mermaid
 erDiagram
@@ -222,7 +266,11 @@ erDiagram
     AGENDA ||--o{ ANIMAL : "para"
 ```
 ---
+
 # 5. Diagrama de classes
+
+[(voltar ao topo)](#vitor_emanuel)
+
 ```mermaid
 classDiagram
     class Cliente {
@@ -334,6 +382,8 @@ classDiagram
 
 # 6. Casos de uso
 
+[(voltar ao topo)](#vitor_emanuel)
+
 ## 6.1 Diagrama de Casos de Uso
 ![Figura 1: Diagrama de casos de uso](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_casos_uso.png)
 
@@ -410,7 +460,7 @@ classDiagram
 **Para** prescrever medicamentos ou tratamentos necessários.
 ```
 
-### 11. Atendimento por Atendente
+### 11.2. Atendimento por Atendente
 ```
 **Como** cliente,  
 **Eu quero** ser recebido por um atendente ao chegar à clínica,  
@@ -551,13 +601,27 @@ classDiagram
 ```
 
 ---
+
 # 7. Diagrama de componentes
+
+[(voltar ao topo)](#vitor_emanuel)
+
 ![Figura : Diagrama de Componentes](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_componente.png)
+
 ---
+
 # 8. Diagrama de implantação
+
+[(voltar ao topo)](#vitor_emanuel)
+
 ![Figura : Diagrama de Implantação](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_implantacao.png)
+
 ---
+
 # 9. Protótipo de telas
+
+[(voltar ao topo)](#vitor_emanuel)
+
 ## 9.1. Tela Menu
 ![Figura : Tela Menu](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_menu.png)
 
@@ -599,13 +663,17 @@ classDiagram
 ![Figura : dashboard](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_dashboard.png)
 
 ---
+
 # 10. Diagrama de navegação de telas
+
+[(voltar ao topo)](#vitor_emanuel)
+
 ```mermaid
-graph TD
+graph LR
     A[Login] --> B[Menu]
-    B -->|Clique no menu lateral| C[Cadastros]
     B -->|Clique no dashboard| D[Dashboard]
     B -->|Clique em gráficos| E[Gráficos]
+    B -->|Clique no menu lateral| C[Cadastros]
     
     C --> F[Cadastro de Agenda]
     C --> G[Cadastro de Animal]
@@ -623,212 +691,276 @@ graph TD
     
     E --> S[Gráfico de Estoque]
     E --> T[Gráfico de Vendas]
-
 ```
+
 ---
+
 # 11. Pilha tecnológica
+
+[(voltar ao topo)](#vitor_emanuel)
+
+## 11.1. Gráfico da Pilha
+
 ```mermaid
 graph TD
-    subgraph Frontend
-        A1[HTML5]
-        A2[CSS3]
-        A3[JavaScript]
-        A4[React]
+    subgraph "Pilha Tecnológica - Clínica Veterinária"
+        A[Linux]
+        B[Apache - Servidor Web]
+        
+        subgraph "Back-End"
+            C[PHP - ScriptCase Framework]
+            D[APIs Internas e Externas]
+        end
+
+        subgraph "Banco de Dados"
+            E[MySQL]
+            F[Tabelas Relacionais]
+            G[Armazenamento de Histórico Clínico]
+        end
+
+        subgraph "Front-End"
+            H[HTML/CSS]
+            I[Bootstrap]
+            J[JavaScript]
+            K[Gráficos e Dashboard Interativos]
+        end
     end
 
-    subgraph Backend
-        B1[Node.js]
-        B2[Express.js]
-        B3[REST API]
-        B4[JWT Authentication]
-    end
-
-    subgraph Database
-        C1[MongoDB]
-        C2[MySQL]
-    end
-
-    subgraph Infrastructure
-        D1[Docker]
-        D2[NGINX]
-        D3[AWS EC2]
-        D4[CI/CD - GitHub Actions]
-    end
-
-    subgraph APIs
-        E1[External API for RFID]
-        E2[Payment Gateway API]
-    end
-
-    A1 --> A2 --> A3 --> A4
-    A4 --> B1
-    B1 --> B2 --> B3 --> B4
-    B1 --> C1
-    B1 --> C2
-    B1 --> D1
-    D1 --> D2 --> D3 --> D4
-    B1 --> E1
-    B1 --> E2
-
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    E --> F
+    E --> G
+    D --> H
+    H --> I
+    I --> J
+    J --> K
 ```
+
+## 11.2. Detalhamento das Camadas da Pilha
+ 
+### 11.2.1 **Linux** (Sistema Operacional): 
+   - Sistema operacional de base que hospeda o servidor web, escolhendo uma distribuição que seja compatível com Apache e MySQL.
+
+### 11.2.2. **Apache (Servidor Web)**:
+   - Responsável por gerenciar requisições HTTP e servir os arquivos da aplicação ao cliente.
+   - Configurado para suportar **PHP** e se comunicar com o **MySQL** para processamento de dados e consultas.
+
+### 11.2.3. **Back-End (PHP - ScriptCase)**:
+   - **PHP com ScriptCase**: Framework que facilita o desenvolvimento de aplicações web com geração automática de formulários, dashboards e gráficos.
+   - **APIs Internas e Externas**: Para funcionalidades como controle de estoque, registros de consultas, e gráficos, além de integração com sistemas de terceiros, se necessário.
+   - **Gerenciamento de Sessões**: Para login seguro e controle de permissões, essencial para o acesso de veterinários, clientes e atendentes ao sistema.
+
+### 11.2.4. **Banco de Dados (MySQL)**:
+   - **Tabelas Relacionais**: Estruturadas para armazenar dados de clientes, animais, atendimentos, prontuários, etc.
+   - **Armazenamento de Histórico Clínico**: Estrutura de dados para o registro detalhado de consultas, exames e procedimentos, que facilita a consulta e histórico do animal.
+
+### 11.2.5. **Front-End (HTML, CSS, Bootstrap, JavaScript)**:
+   - **HTML/CSS**: Estrutura e estilização das páginas.
+   - **Bootstrap**: Framework CSS integrado ao ScriptCase, que permite um design responsivo e consistente.
+   - **JavaScript**: Para funcionalidades interativas, como formulários dinâmicos e navegação fluida.
+   - **Gráficos e Dashboard Interativos**: Utilização de bibliotecas JavaScript para gráficos interativos e visualização de dados da clínica, como estoque e número de atendimentos.
+
+
 ---
+
 # 12. Requisitos de sistemas
 
-## 12.1. Lado Cliente:
-### 12.1.1. Dispositivos: 
-   - O cliente acessa o sistema via PCs, tablets ou celulares.
-   
-### 12.1.2. Navegadores Web: 
-   - O sistema é acessível por meio de navegadores como Chrome, Firefox e Edge.
+[(voltar ao topo)](#vitor_emanuel)
 
-### 12.1.3. Interface de Usuário: 
-   - A interface é construída com React.js, garantindo a interação do cliente com o sistema.
+## 12.1. Requisitos do Lado Cliente
 
-### 12.1.4. Autenticação: 
-   - O usuário deve se autenticar via login.
+### 12.1.1. Dispositivos:
+   - O sistema é acessível a partir de PCs, tablets e smartphones, para facilitar o uso tanto por funcionários quanto por clientes.
 
-### 12.1.5. Funcionalidades:
-   - Notificações de vacinas/procedimentos.
-   - Agendamento de consultas e exames.
-   - Acesso ao histórico do animal.
-   - Preenchimento de formulários de cadastro, atendimentos e exames.
-   - Marcação e cancelamento de consultas.
+### 12.1.2. Navegadores Web:
+   - Compatível com navegadores modernos, como **Google Chrome**, **Mozilla Firefox**, e **Microsoft Edge** para melhor acessibilidade e experiência do usuário.
 
-## 12.2. Lado Servidor
+### 12.1.3. Interface de Usuário:
+   - A interface é construída com **React.js** e **Bootstrap** para uma experiência de usuário responsiva e interativa.
+
+### 12.1.4. Autenticação:
+   - Os usuários precisam autenticar-se por meio de login para acessar as funcionalidades, garantindo segurança e controle de acesso.
+
+### 12.1.5. Funcionalidades Disponíveis:
+   - **Notificações** de vacinas e procedimentos periódicos.
+   - **Agendamento** de consultas e exames.
+   - **Acesso ao histórico** completo do animal, incluindo exames e tratamentos.
+   - **Formulários** para cadastro, atendimento e exames.
+   - **Marcação e cancelamento** de consultas de forma simplificada.
+
+
+## 12.2. Requisitos do Lado Servidor
+
 ### 12.2.1. Servidor de Aplicação:
-   - O Node.js é responsável por executar a aplicação.
+   - O **Node.js** serve como o servidor de aplicação principal, gerenciando a lógica de negócios e as interações do cliente com o sistema.
 
 ### 12.2.2. Servidor de Banco de Dados:
-   - MongoDB e MySQL são usados para armazenar os dados da clínica.
+   - Utilização do **MySQL** para dados relacionais (clientes, animais, veterinários, consultas)
+   - **MongoDB** para dados não relacionais, como logs e histórico clínico dos animais.
 
 ### 12.2.3. Servidor Web:
-   - NGINX serve o conteúdo estático e redireciona as requisições para o backend.
+   - O **Apache** é o servidor web responsável por servir conteúdo estático e lidar com requisições dinâmicas para o backend.
 
 ### 12.2.4. API REST:
-   - A API baseada em Express.js gerencia as requisições e responde ao cliente.
+   - A **API** baseada em **Express.js** é o ponto de comunicação entre o cliente e o servidor, facilitando o envio de dados e recebimento de respostas.
 
-### 12.2.5. Funcionalidades:
-   - Autenticação JWT: Garante que o usuário esteja autenticado para acessar o sistema.
-   - Gestão de Usuários e Permissões: Controle de quem pode acessar cada funcionalidade.
-   - Gestão de Agenda: Consultas, exames e controle de horários.
-   - Gestão de Estoque: Atualização automática do estoque quando produtos são vendidos ou prescritos.
-   - Cadastro de Animais e Veterinários: Registro de novos pacientes e profissionais.
-   - Prontuário e Ficha Médica: Registro das informações de saúde dos animais.
-   - Controle de Exames Complementares: Exames como raio-X e sangue.
-   - Emissão de Receitas: Prescrição de medicamentos.
-   - Backup e Recuperação: Sistema de backup de dados.
-   - Integração com Pagamentos: Sistema de pagamento e emissão de recibos.
-   - Monitoramento e Logs: Registro de atividades e eventos no sistema.
+### 12.2.5. Funcionalidades do Servidor:
+   - **Autenticação JWT**: Garante que os usuários autenticados tenham acesso seguro às funcionalidades.
+   - **Gestão de Usuários e Permissões**: Controle de acesso baseado em permissões.
+   - **Gestão de Agenda**: Organização de horários de consultas e exames.
+   - **Gestão de Estoque**: Controle automatizado do estoque de medicamentos e rações.
+   - **Cadastro de Animais e Veterinários**: Registro de novos pacientes e profissionais.
+   - **Prontuário e Ficha Médica**: Registro de saúde completo do animal.
+   - **Controle de Exames Complementares**: Registros e agendamento de exames adicionais.
+   - **Emissão de Receitas**: Gerenciamento de prescrições de medicamentos.
+   - **Backup e Recuperação**: Sistema automático de backup e restauração de dados.
+   - **Integração com Pagamentos**: Sistema de pagamento para consultas e produtos.
+   - **Monitoramento e Logs**: Armazenamento e rastreamento de atividades e eventos do sistema.
 
-```mermaid
-graph TD
-    subgraph Lado Cliente
-        A1[Dispositivos dos Usuários]
-        A2[Navegadores Web]
-        A3[Interface de Usuário]
-        A4[Autenticação de Usuário]
-        A5[Notificações de Vacinas/Procedimentos]
-        A6[Agendamento de Consultas]
-        A7[Acesso ao Histórico do Animal]
-        A8[Interação com Formulários]
-        A9[Marcação e Cancelamento de Consultas]
-    end
-
-    subgraph Lado Servidor
-        B1[Servidor de Aplicação]
-        B2[Servidor de Banco de Dados]
-        B3[Servidor Web]
-        B4[API REST]
-        B5[Autenticação JWT]
-        B6[Gestão de Usuários e Permissões]
-        B7[Gestão de Agenda]
-        B8[Gestão de Estoque]
-        B9[Cadastro de Animais e Veterinários]
-        B10[Registro de Prontuário e Ficha Médica]
-        B11[Controle de Exames Complementares]
-        B12[Emissão de Receitas e Prescrições]
-        B13[Atualização de Estoque Automática]
-        B14[Backup e Recuperação de Dados]
-        B15[Integração com Pagamentos]
-        B16[Monitoramento e Logs de Atividade]
-    end
-
-    %% Conexões entre Cliente e Servidor
-
-    A1 --> A2
-    A2 --> A3
-    A3 --> B4
-    A4 --> B5
-    A6 --> B7
-    A7 --> B10
-    A8 --> B9
-    A9 --> B7
-    A5 --> B7
-
-    %% Conexões entre componentes do servidor
-    B1 --> B4
-    B1 --> B3
-    B4 --> B2
-    B4 --> B5
-    B4 --> B6
-    B4 --> B7
-    B4 --> B9
-    B4 --> B8
-    B4 --> B10
-    B4 --> B11
-    B4 --> B12
-    B8 --> B13
-    B2 --> B14
-    B4 --> B15
-    B4 --> B16
-```
 
 ---
+
 # 13. Considerações sobre segurança
-## 13.1. Lado cliente
-> Regras de senha
-- Captcha, quantidade mínima de caracteres, caracteres especiais, etc.
-- Autenticação de 2 fatores
-- Recuperação de senha com email
 
-> Política de segurança
-- Anti vírus
+[(voltar ao topo)](#vitor_emanuel)
 
-## 13.1. Lado Servidor
-> Linux
+A segurança é um aspecto essencial na arquitetura de um sistema para garantir a proteção de dados sensíveis, prevenir ataques cibernéticos, e assegurar que o software esteja em conformidade com regulamentações. Uma abordagem preventiva é fundamental para a confiança dos usuários e para a estabilidade da aplicação.
 
-> Política de backup
-- 1x todo fim de expediente
+## 13.1. Lado Cliente
 
-> O administrador do sistema não acessa dados do usuário
+### Regras de Senha
+- **Força da senha**: Exige no mínimo 8 caracteres, com pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial.
+- **Autenticação de Dois Fatores (2FA)**: Requer um segundo fator de autenticação, como código por SMS ou aplicativo autenticador.
+- **Recuperação de Senha com E-mail**: Para redefinir a senha, o usuário recebe um link ou código no e-mail cadastrado, mantendo um fluxo seguro de recuperação.
+
+### Política de Segurança
+- **Captcha**: Adicionado em formulários de login para evitar ataques de bots.
+- **Antivírus**: Recomenda-se que os dispositivos do cliente tenham antivírus atualizado para evitar roubo de credenciais e outros tipos de malware.
+
+## 13.2. Lado Servidor
+
+### Sistema Operacional
+- **Linux**: O servidor de aplicação e o banco de dados operam sobre uma distribuição Linux (como Ubuntu Server ou CentOS) devido à estabilidade, segurança e personalização oferecidas pela plataforma para ambientes web.
+
+### Política de Backup
+- **Backups Diários Incrementais**: Realizados no final de cada dia para registrar mudanças recentes.
+- **Backups Quinzenais Completos**: Realizados a cada 15 dias para assegurar uma cópia integral do sistema.
+- **Backup Mensal Completo**: Realizado uma vez por mês e armazenado em uma localização segura fora do ambiente principal do servidor, como um armazenamento externo ou na nuvem.
+- **Monitoramento de Backup**: Realizado por ferramentas automatizadas que garantem que os backups ocorram conforme planejado, com notificações sobre falhas.
+
+### Políticas de Acesso e Privacidade
+- **Administração Restrita**: O administrador do sistema não tem acesso aos dados sensíveis dos usuários, apenas a permissões e funções administrativas necessárias para manter o funcionamento do sistema.
+- **Acesso Baseado em Funções (RBAC)**: Permissões são gerenciadas com base nas funções dos usuários, restringindo ações de leitura e escrita aos dados relevantes.
+
+### Medidas de Segurança Adicionais
+- **Firewall**: Proteção do servidor com firewall configurado para limitar acessos apenas a portas necessárias, como 80 (HTTP) e 443 (HTTPS).
+- **Criptografia**: Dados sensíveis, como senhas e informações médicas, são armazenados criptografados no banco de dados. A transmissão de dados entre cliente e servidor é feita via HTTPS.
+- **Logs de Segurança e Monitoramento**: Ferramentas de monitoramento e logs de auditoria para rastrear atividades e detectar tentativas de intrusão.
 
 
 ---
-# 14. Instalação, manutenção e novas funcionalidades
+
+# 14. Instalação, Manutenção e Novas Funcionalidades
+
+[(voltar ao topo)](#vitor_emanuel)
+
+Este tópico descreve os processos necessários para a instalação, manutenção e expansão de funcionalidades do sistema, incluindo critérios para avaliação de novas demandas.
+
 ## 14.1. Instalação
-> Definir regras de instalação
+
+Para garantir que o sistema seja configurado corretamente, seguem as diretrizes de instalação:
+
+- **Ambiente do Servidor**:
+  - Verificar se o servidor possui uma distribuição Linux (Ubuntu Server recomendado) ou compatível com as exigências do sistema.
+  - Instalar o Apache como servidor web e garantir que o PHP (versão compatível com o ScriptCase) esteja configurado.
+  - Configurar o banco de dados MySQL e MongoDB, criando os usuários e as permissões necessárias.
+  - Configurar variáveis de ambiente para armazenar credenciais e dados sensíveis de forma segura.
+  - Utilizar HTTPS para comunicação segura e configurar o firewall para liberar apenas as portas necessárias (80 e 443).
+
+- **Clientes**:
+  - O cliente acessa o sistema pelo navegador, dispensando instalações adicionais no dispositivo.
+  - Garantir a compatibilidade com navegadores modernos (Chrome, Firefox, Edge).
+  - Instruir o cliente a manter o antivírus atualizado e seguir políticas de senha seguras.
 
 ## 14.2. Manutenção
-> Definir regras de manutenção
+
+A manutenção contínua é essencial para a estabilidade e segurança do sistema. As regras incluem:
+
+- **Backups Regulares**:
+  - Verificar e armazenar os backups diários incrementais e completos quinzenais e mensais.
+  - Monitorar a integridade dos backups e a frequência dos procedimentos para evitar falhas de recuperação.
+
+- **Atualizações de Segurança**:
+  - Atualizar regularmente os pacotes de software (Apache, PHP, e MongoDB) e garantir que estejam protegidos contra vulnerabilidades conhecidas.
+  - Realizar atualizações de segurança nos scripts de autenticação e APIs REST, conforme surgirem novas práticas ou regulamentações.
+
+- **Monitoramento e Logs**:
+  - Manter logs de auditoria para rastrear atividades e detectar tentativas de acesso indevido ou anomalias no sistema.
+  - Monitorar o desempenho do sistema para identificar gargalos e otimizar o funcionamento conforme necessário.
 
 ## 14.3. Novas Funcionalidades
-- coisas a serem feitas e não serem feitas
-- formalização do pedido
-- cliente não dá palpite em beleza de tecnológica
-- Decidir sobre 3 critérios
-    a) Equipe tem tempo?
-    b) É economicamente viável?
-    c) É tecnológicamente viável?
+
+Para solicitações de novas funcionalidades, devem ser consideradas as seguintes diretrizes:
+
+- **Procedimentos e Limitações**:
+  - O cliente deve formalizar o pedido por meio de um documento ou formulário específico, detalhando a nova funcionalidade desejada.
+  - O cliente não interfere na escolha de tecnologias ou design técnico, mantendo-se focado na funcionalidade e usabilidade.
+
+- **Critérios de Viabilidade**:
+  - **Equipe tem tempo?**: A equipe possui recursos e disponibilidade para trabalhar na nova funcionalidade sem comprometer outros processos?
+  - **É economicamente viável?**: O custo e o esforço de desenvolvimento estão dentro do orçamento disponível?
+  - **É tecnologicamente viável?**: A nova funcionalidade é compatível com a infraestrutura existente e as tecnologias empregadas?
+
+Se a funcionalidade não atender a todos os critérios acima, o desenvolvimento deve ser cancelado, adiado ou reavaliado para uma nova fase do projeto.
+
+Essas políticas garantem que o sistema permaneça estável e seguro, além de oferecer uma expansão bem planejada, evitando sobrecargas e instabilidades.
 
 
 ---
+
 # 15. Treinamento
+
+[(voltar ao topo)](#vitor_emanuel)
+
+Para assegurar que o sistema seja utilizado de maneira eficaz, é necessário oferecer treinamentos específicos para os usuários finais e para o administrador do sistema. Esses treinamentos ajudarão a garantir que todos os envolvidos saibam utilizar as funcionalidades disponíveis, evitando erros e aumentando a eficiência operacional.
+
 ## 15.1. Treinamento dos Usuários
 
-## 15.2. Treinamento do administrador do sistemas
+O treinamento dos usuários será focado nas principais funcionalidades que eles utilizarão no dia a dia. Seguem os pontos principais:
+
+- **Público-Alvo**: Atendentes, veterinários e profissionais de suporte.
+- **Conteúdo do Treinamento**:
+  - **Navegação no Sistema**: Explicação do layout, das telas de login, dashboard e menu principal.
+  - **Cadastro de Dados**: Passo a passo de como cadastrar clientes, animais, fichas de atendimento e agendamentos.
+  - **Agendamentos e Filas**: Como consultar a agenda de atendimentos e agendar exames ou consultas futuras.
+  - **Consulta e Atualização de Fichas**: Instruções sobre o preenchimento de fichas médicas, anotação de exames, vacinas, e inclusão de novas observações.
+  - **Relatórios e Gráficos**: Como acessar e interpretar relatórios de vendas, estoque e gráficos gerados pelo sistema.
+  - **Regras de Segurança**: Recomendações sobre a importância do uso de senhas fortes, logoff após o uso e boas práticas de proteção de dados.
+
+- **Metodologia**: Treinamentos presenciais com duração de uma a duas horas, com recursos audiovisuais e materiais de apoio. Haverá também vídeos tutoriais e guias rápidos disponíveis para consulta posterior.
+
+## 15.2. Treinamento do Administrador do Sistema
+
+O treinamento do administrador do sistema é mais técnico e abrange aspectos de configuração, segurança e manutenção. Ele deve estar preparado para lidar com problemas, executar backups e monitorar o sistema.
+
+- **Conteúdo do Treinamento**:
+  - **Gerenciamento de Usuários e Permissões**: Como adicionar, remover e ajustar permissões dos usuários do sistema.
+  - **Configuração e Atualização do Sistema**: Procedimentos para atualizar o sistema, configurar parâmetros de segurança e gerenciar o banco de dados.
+  - **Monitoramento e Logs**: Análise de logs e monitoramento do sistema para identificação de possíveis problemas ou atividades suspeitas.
+  - **Backups e Recuperação de Dados**: Execução de backups e restauração de dados em caso de falhas ou perda de informações.
+  - **Segurança e Acesso**: Implementação de autenticação de dois fatores, gerenciamento de senhas de administrador e práticas para garantir a segurança do sistema.
+  - **Manutenção Preventiva**: Procedimentos de manutenção regular para garantir que o sistema esteja funcionando corretamente, incluindo testes de performance e atualizações de pacotes.
+
+- **Metodologia**: Treinamento presencial com maior duração e profundidade, com simulações práticas para realizar backup, restaurar dados e gerenciar permissões. Manuais técnicos e instruções detalhadas também estarão disponíveis para consulta.
+
 
 ---
+
 # 16. Script SQL
+
+[(voltar ao topo)](#vitor_emanuel)
 
 ## 16.1 Script para criar as tabelas
 ```SQL
