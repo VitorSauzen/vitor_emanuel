@@ -5,7 +5,11 @@
 
 - [Vitor\_Emanuel](#vitor_emanuel)
 - [1. Introdução](#1-introdução)
-- [2. Descrição do negócio](#2-descrição-do-negócio)
+- [2. Descrições do negócio](#2-descrições-do-negócio)
+  - [2.1 Descrição do negócio](#21-descrição-do-negócio)
+  - [2.2 Requisitos do Sistema](#22-requisitos-do-sistema)
+    - [2.2.1 Requisitos Funcionais](#221-requisitos-funcionais)
+    - [2.2.2 Requisitos não funcionais](#222-requisitos-não-funcionais)
 - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
   - [3.1. Descrição do sistema do ponto de vista do usuário final](#31-descrição-do-sistema-do-ponto-de-vista-do-usuário-final)
 - [4. Diagrama ER](#4-diagrama-er)
@@ -23,12 +27,12 @@
     - [8. Ficha e Prontuário do Animal](#8-ficha-e-prontuário-do-animal)
     - [9. Marcação de Horários Futuros](#9-marcação-de-horários-futuros)
     - [10. Receita Gerada Após Atendimento](#10-receita-gerada-após-atendimento)
-    - [11.2. Atendimento por Atendente](#112-atendimento-por-atendente)
-    - [12. Verificação de Disponibilidade na Agenda](#12-verificação-de-disponibilidade-na-agenda)
-    - [13. Inserção em Fila de Espera](#13-inserção-em-fila-de-espera)
-    - [14. Encaminhamento para o Veterinário](#14-encaminhamento-para-o-veterinário)
-    - [15. Entrevista com o Dono do Animal](#15-entrevista-com-o-dono-do-animal)
-    - [16. Formulário de Entrevista](#16-formulário-de-entrevista)
+    - [12.2. Atendimento por Atendente](#122-atendimento-por-atendente)
+    - [13. Verificação de Disponibilidade na Agenda](#13-verificação-de-disponibilidade-na-agenda)
+    - [14. Inserção em Fila de Espera](#14-inserção-em-fila-de-espera)
+    - [15. Encaminhamento para o Veterinário](#15-encaminhamento-para-o-veterinário)
+    - [16. Entrevista com o Dono do Animal](#16-entrevista-com-o-dono-do-animal)
+    - [17. Formulário de Entrevista](#17-formulário-de-entrevista)
     - [17. Exame do Animal e Observações](#17-exame-do-animal-e-observações)
     - [18. Emissão de Receita](#18-emissão-de-receita)
     - [19. Solicitação de Exames Complementares](#19-solicitação-de-exames-complementares)
@@ -45,80 +49,86 @@
     - [30. Parcerias com Pet Shops e Laboratórios](#30-parcerias-com-pet-shops-e-laboratórios)
 - [7. Diagrama de componentes](#7-diagrama-de-componentes)
 - [8. Diagrama de implantação](#8-diagrama-de-implantação)
-- [9. Protótipo de telas](#9-protótipo-de-telas)
-  - [9.1. Tela Menu](#91-tela-menu)
-  - [9.2. Telas de Cadastro](#92-telas-de-cadastro)
-    - [9.2.1 Cadastro de Agenda](#921-cadastro-de-agenda)
-    - [9.2.2 Cadastro de Animal](#922-cadastro-de-animal)
-    - [9.2.3 Cadastro de Atendente](#923-cadastro-de-atendente)
-    - [9.2.4 Cadastro de Atendimento](#924-cadastro-de-atendimento)
-    - [9.2.5 Cadastro de Cliente](#925-cadastro-de-cliente)
-    - [9.2.6 Cadastro de Exame](#926-cadastro-de-exame)
-    - [9.2.7 Cadastro de Ficha](#927-cadastro-de-ficha)
-    - [9.2.8 Cadastro de Parceria](#928-cadastro-de-parceria)
-    - [9.2.9 Cadastro de Produto](#929-cadastro-de-produto)
-    - [9.2.10 Cadastro de Servico](#9210-cadastro-de-servico)
-    - [9.2.11 Cadastro de Vacina](#9211-cadastro-de-vacina)
-    - [9.2.12 Cadastro de Venda](#9212-cadastro-de-venda)
-    - [9.2.13 Cadastro de Veterinario](#9213-cadastro-de-veterinario)
-  - [9.3 Telas de Gráficos](#93-telas-de-gráficos)
-    - [9.3.1 Gráfico de Estoque](#931-gráfico-de-estoque)
-    - [9.3.1 Gráfico de Vendas](#931-gráfico-de-vendas)
-  - [9.4 Tela de Dashboard](#94-tela-de-dashboard)
-- [10. Diagrama de navegação de telas](#10-diagrama-de-navegação-de-telas)
-- [11. Pilha tecnológica](#11-pilha-tecnológica)
-  - [11.1. Gráfico da Pilha](#111-gráfico-da-pilha)
-  - [11.2. Detalhamento das Camadas da Pilha](#112-detalhamento-das-camadas-da-pilha)
-    - [11.2.1 **Linux** (Sistema Operacional):](#1121-linux-sistema-operacional)
-    - [11.2.2. **Apache (Servidor Web)**:](#1122-apache-servidor-web)
-    - [11.2.3. **Back-End (PHP - ScriptCase)**:](#1123-back-end-php---scriptcase)
-    - [11.2.4. **Banco de Dados (MySQL)**:](#1124-banco-de-dados-mysql)
-    - [11.2.5. **Front-End (HTML, CSS, Bootstrap, JavaScript)**:](#1125-front-end-html-css-bootstrap-javascript)
-- [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
-  - [12.1. Requisitos do Lado Cliente](#121-requisitos-do-lado-cliente)
-    - [12.1.1. Dispositivos:](#1211-dispositivos)
-    - [12.1.2. Navegadores Web:](#1212-navegadores-web)
-    - [12.1.3. Interface de Usuário:](#1213-interface-de-usuário)
-    - [12.1.4. Autenticação:](#1214-autenticação)
-    - [12.1.5. Funcionalidades Disponíveis:](#1215-funcionalidades-disponíveis)
-  - [12.2. Requisitos do Lado Servidor](#122-requisitos-do-lado-servidor)
-    - [12.2.1. Servidor de Aplicação:](#1221-servidor-de-aplicação)
-    - [12.2.2. Servidor de Banco de Dados:](#1222-servidor-de-banco-de-dados)
-    - [12.2.3. Servidor Web:](#1223-servidor-web)
-    - [12.2.4. API REST:](#1224-api-rest)
-    - [12.2.5. Funcionalidades do Servidor:](#1225-funcionalidades-do-servidor)
-- [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
-  - [13.1. Lado Cliente](#131-lado-cliente)
+- [9. Diagrama C4](#9-diagrama-c4)
+  - [9.1 Diagrama de Contexto](#91-diagrama-de-contexto)
+  - [9.2 Diagrama de Container](#92-diagrama-de-container)
+  - [9.3 Diagrama de Componente](#93-diagrama-de-componente)
+  - [9.4 Diagrama de Código](#94-diagrama-de-código)
+- [10. Protótipo de telas](#10-protótipo-de-telas)
+  - [10.1. Tela Menu](#101-tela-menu)
+  - [10.2. Telas de Cadastro](#102-telas-de-cadastro)
+    - [10.2.1 Cadastro de Agenda](#1021-cadastro-de-agenda)
+    - [10.2.2 Cadastro de Animal](#1022-cadastro-de-animal)
+    - [10.2.3 Cadastro de Atendente](#1023-cadastro-de-atendente)
+    - [10.2.4 Cadastro de Atendimento](#1024-cadastro-de-atendimento)
+    - [10.2.5 Cadastro de Cliente](#1025-cadastro-de-cliente)
+    - [10.2.6 Cadastro de Exame](#1026-cadastro-de-exame)
+    - [10.2.7 Cadastro de Ficha](#1027-cadastro-de-ficha)
+    - [10.2.8 Cadastro de Parceria](#1028-cadastro-de-parceria)
+    - [10.2.9 Cadastro de Produto](#1029-cadastro-de-produto)
+    - [10.2.10 Cadastro de Servico](#10210-cadastro-de-servico)
+    - [10.2.11 Cadastro de Vacina](#10211-cadastro-de-vacina)
+    - [10.2.12 Cadastro de Venda](#10212-cadastro-de-venda)
+    - [10.2.13 Cadastro de Veterinario](#10213-cadastro-de-veterinario)
+  - [10.3 Telas de Gráficos](#103-telas-de-gráficos)
+    - [10.3.1 Gráfico de Estoque](#1031-gráfico-de-estoque)
+    - [10.3.1 Gráfico de Vendas](#1031-gráfico-de-vendas)
+  - [10.4 Tela de Dashboard](#104-tela-de-dashboard)
+- [11. Diagrama de navegação de telas](#11-diagrama-de-navegação-de-telas)
+- [12. Pilha tecnológica](#12-pilha-tecnológica)
+  - [12.1. Gráfico da Pilha](#121-gráfico-da-pilha)
+  - [12.2. Detalhamento das Camadas da Pilha](#122-detalhamento-das-camadas-da-pilha)
+    - [12.2.1 **Linux** (Sistema Operacional):](#1221-linux-sistema-operacional)
+    - [12.2.2. **Apache (Servidor Web)**:](#1222-apache-servidor-web)
+    - [12.2.3. **Back-End (PHP - ScriptCase)**:](#1223-back-end-php---scriptcase)
+    - [12.2.4. **Banco de Dados (MySQL)**:](#1224-banco-de-dados-mysql)
+    - [12.2.5. **Front-End (HTML, CSS, Bootstrap, JavaScript)**:](#1225-front-end-html-css-bootstrap-javascript)
+- [13. Requisitos de sistemas](#13-requisitos-de-sistemas)
+  - [13.1. Requisitos do Lado Cliente](#131-requisitos-do-lado-cliente)
+    - [13.1.1. Dispositivos:](#1311-dispositivos)
+    - [13.1.2. Navegadores Web:](#1312-navegadores-web)
+    - [13.1.3. Interface de Usuário:](#1313-interface-de-usuário)
+    - [13.1.4. Autenticação:](#1314-autenticação)
+    - [13.1.5. Funcionalidades Disponíveis:](#1315-funcionalidades-disponíveis)
+  - [13.2. Requisitos do Lado Servidor](#132-requisitos-do-lado-servidor)
+    - [13.2.1. Servidor de Aplicação:](#1321-servidor-de-aplicação)
+    - [13.2.2. Servidor de Banco de Dados:](#1322-servidor-de-banco-de-dados)
+    - [13.2.3. Servidor Web:](#1323-servidor-web)
+    - [13.2.4. API REST:](#1324-api-rest)
+    - [13.2.5. Funcionalidades do Servidor:](#1325-funcionalidades-do-servidor)
+- [14. Considerações sobre segurança](#14-considerações-sobre-segurança)
+  - [14.1. Lado Cliente](#141-lado-cliente)
     - [Regras de Senha](#regras-de-senha)
     - [Política de Segurança](#política-de-segurança)
-  - [13.2. Lado Servidor](#132-lado-servidor)
+  - [14.2. Lado Servidor](#142-lado-servidor)
     - [Sistema Operacional](#sistema-operacional)
     - [Política de Backup](#política-de-backup)
     - [Políticas de Acesso e Privacidade](#políticas-de-acesso-e-privacidade)
     - [Medidas de Segurança Adicionais](#medidas-de-segurança-adicionais)
-- [14. Instalação, Manutenção e Novas Funcionalidades](#14-instalação-manutenção-e-novas-funcionalidades)
-  - [14.1. Instalação](#141-instalação)
-  - [14.2. Manutenção](#142-manutenção)
-  - [14.3. Novas Funcionalidades](#143-novas-funcionalidades)
-- [15. Treinamento](#15-treinamento)
-  - [15.1. Treinamento dos Usuários](#151-treinamento-dos-usuários)
-  - [15.2. Treinamento do Administrador do Sistema](#152-treinamento-do-administrador-do-sistema)
-- [16. Script SQL](#16-script-sql)
-  - [16.1 Script para criar as tabelas](#161-script-para-criar-as-tabelas)
-  - [16.2 Scrip para inserir dados fictícios](#162-scrip-para-inserir-dados-fictícios)
+- [15. Instalação, Manutenção e Novas Funcionalidades](#15-instalação-manutenção-e-novas-funcionalidades)
+  - [15.1. Instalação](#151-instalação)
+  - [15.2. Manutenção](#152-manutenção)
+  - [15.3. Novas Funcionalidades](#153-novas-funcionalidades)
+- [16. Treinamento](#16-treinamento)
+  - [16.1. Treinamento dos Usuários](#161-treinamento-dos-usuários)
+  - [16.2. Treinamento do Administrador do Sistema](#162-treinamento-do-administrador-do-sistema)
+- [17. Script SQL](#17-script-sql)
+  - [17.1 Script para criar as tabelas](#171-script-para-criar-as-tabelas)
+  - [17.2 Scrip para inserir dados fictícios](#172-scrip-para-inserir-dados-fictícios)
 
 
 # 1. Introdução
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 O projeto a seguir apresenta um sistema desenvolvido para uma petshop. A empresa é considerada uma microempresa e iniciou as atividades recentemente. Ao possuir serviços exclusivos, os sistemas presentes no mercado não se enquadra, desta forma, os proprietários decidiram desenvolver uma solução própria. Esta solução é detalhada a seguir
 
 ---
 
-# 2. Descrição do negócio
+# 2. Descrições do negócio
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
+## 2.1 Descrição do negócio
 
 Descrição do cenário onde o sistema deverá funcionar:
 1. Uma clínica veterinária atende apenas os animais: gatos e cachorros.
@@ -152,12 +162,58 @@ Descrição do cenário onde o sistema deverá funcionar:
 29. Cada animal deve ter um histórico detalhado de todas as consultas, exames, receitas e tratamentos realizados, com a possibilidade de o cliente acessar essas informações, se autorizado.
 30. Novos veterinários ou funcionários da clínica podem ser cadastrados, associando as especialidades e funções de cada um para facilitar o agendamento e a triagem de casos.
 
+## 2.2 Requisitos do Sistema
+### 2.2.1 Requisitos Funcionais
+```mermaid
+classDiagram
+class RequisitosFuncionais {
+    - RF01: Cadastro de Clientes e Animais
+    - RF02: Registro das Condições do Animal
+    - RF03: Registro de Tipo de Ração e Hábitos do Animal
+    - RF04: Gerenciamento de Agenda Diária de Atendimentos
+    - RF05: Criação de Ficha e Prontuário para cada Animal
+    - RF06: Agendamento de Consultas Futuras
+    - RF07: Geração de Receita após Atendimento
+    - RF08: Verificação e Controle de Agenda pelo Atendente
+    - RF09: Gerenciamento da Fila de Espera
+    - RF10: Realização de Entrevista e Registro em Formulário
+    - RF11: Registro de Observações e Exames no Prontuário
+    - RF12: Solicitação de Exames Complementares e Agenda para Exames
+    - RF13: Agendamento de Consultas e Exames pelo Cliente
+    - RF14: Cancelamento ou Remarcação de Consultas pelo Atendente
+    - RF15: Registro de Alergias ou Restrições Alimentares
+    - RF16: Agendamento e Controle de Vacinação
+    - RF17: Marcação de Animais com RFID
+    - RF18: Serviços de Banho e Tosa
+    - RF19: Venda de Rações e Medicamentos
+    - RF20: Controle de Estoque de Medicamentos e Rações
+    - RF21: Histórico Detalhado de Atendimentos e Acesso pelo Cliente
+    - RF22: Cadastro de Veterinários e Funcionários com Especialidades
+}
+```
+
+### 2.2.2 Requisitos não funcionais
+```mermaid
+classDiagram
+class RequisitosNaoFuncionais {
+    - RNF01: Segurança e Privacidade dos Dados do Cliente e Animal
+    - RNF02: Interface Intuitiva e de Fácil Navegação
+    - RNF03: Compatibilidade com Dispositivos Móveis
+    - RNF04: Sistema de Notificação Automática para Vacinação e Procedimentos
+    - RNF05: Atualização Automática do Estoque após Prescrição
+    - RNF06: Alta Disponibilidade e Desempenho do Sistema
+    - RNF07: Capacidade de Escalabilidade para Suporte a Múltiplas Clínicas
+    - RNF08: Acesso Restrito por Níveis de Permissão para Funcionários
+    - RNF09: Conformidade com Regulamentações de Saúde Animal
+    - RNF10: Backup e Recuperação de Dados Automatizados
+}
+```
 
 ---
 
 # 3. Visão geral do sistema
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 O sistema desenvolvido para a clínica veterinária tem como objetivo otimizar e gerenciar o atendimento aos animais de forma eficiente, proporcionando uma experiência fluida tanto para os usuários quanto para os atendentes. 
 
@@ -183,7 +239,7 @@ Em resumo, o sistema proporciona uma solução integrada que melhora a eficiênc
 
 # 4. Diagrama ER
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 ```mermaid
 erDiagram
@@ -269,7 +325,7 @@ erDiagram
 
 # 5. Diagrama de classes
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 ```mermaid
 classDiagram
@@ -382,7 +438,7 @@ classDiagram
 
 # 6. Casos de uso
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 ## 6.1 Diagrama de Casos de Uso
 ![Figura 1: Diagrama de casos de uso](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_casos_uso.png)
@@ -460,42 +516,42 @@ classDiagram
 **Para** prescrever medicamentos ou tratamentos necessários.
 ```
 
-### 11.2. Atendimento por Atendente
+### 12.2. Atendimento por Atendente
 ```
 **Como** cliente,  
 **Eu quero** ser recebido por um atendente ao chegar à clínica,  
 **Para** ser orientado sobre o processo de consulta e atendimento.
 ```
 
-### 12. Verificação de Disponibilidade na Agenda
+### 13. Verificação de Disponibilidade na Agenda
 ```
 **Como** atendente,  
 **Eu quero** verificar se há vagas disponíveis na agenda dos veterinários,  
 **Para** encaixar novos atendimentos.
 ```
 
-### 13. Inserção em Fila de Espera
+### 14. Inserção em Fila de Espera
 ```
 **Como** atendente,  
 **Eu quero** colocar clientes e seus animais na fila de espera,  
 **Para** organizar os atendimentos de acordo com a disponibilidade dos veterinários.
 ```
 
-### 14. Encaminhamento para o Veterinário
+### 15. Encaminhamento para o Veterinário
 ```
 **Como** atendente,  
 **Eu quero** acompanhar o cliente e seu animal até o veterinário,  
 **Para** garantir que o processo de atendimento seja fluido e organizado.
 ```
 
-### 15. Entrevista com o Dono do Animal
+### 16. Entrevista com o Dono do Animal
 ```
 **Como** veterinário,  
 **Eu quero** realizar uma entrevista com o dono do animal,  
 **Para** coletar informações importantes sobre o pet antes de iniciar o exame.
 ```
 
-### 16. Formulário de Entrevista
+### 17. Formulário de Entrevista
 ```
 **Como** veterinário,  
 **Eu quero** registrar as informações da entrevista em um formulário,  
@@ -604,7 +660,7 @@ classDiagram
 
 # 7. Diagrama de componentes
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 ![Figura : Diagrama de Componentes](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_componente.png)
 
@@ -612,61 +668,212 @@ classDiagram
 
 # 8. Diagrama de implantação
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 ![Figura : Diagrama de Implantação](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/diagrama_implantacao.png)
 
 ---
 
-# 9. Protótipo de telas
+# 9. Diagrama C4
 
-[(voltar ao topo)](#vitor_emanuel)
+## 9.1 Diagrama de Contexto
+```mermaid
+flowchart TB
+    Cliente -->|Informa dados, agenda consultas| Atendimento
+    Cliente -->|Fornece informações do animal| Cadastro
+    Atendimento -->|Organiza fila e agenda| Veterinário
+    Atendimento -->|Registra consulta e exames| Prontuário
+    Veterinário -->|Realiza consulta, anota no prontuário| Prontuário
+    Veterinário -->|Prescreve receitas e exames| Estoque
+    Prontuário -->|Consulta histórico| Cliente
+    Estoque -->|Atualiza medicamentos e ração| Prontuário
+    Veterinário -->|Solicita exames e tratamento| Exames
+    Exames -->|Agenda exames e armazena resultados| Prontuário
+    Atendimento -->|Gerencia reagendamentos| Agenda
+    Atendimento -->|Gerencia notificações| Notificações
 
-## 9.1. Tela Menu
+```
+
+## 9.2 Diagrama de Container
+```mermaid
+flowchart TB
+    subgraph Sistema Veterinário
+        Atendimento["Container: Atendimento"]
+        Cadastro["Container: Cadastro de Cliente e Animal"]
+        Agenda["Container: Gerenciamento de Agenda"]
+        Prontuário["Container: Prontuário e Histórico Médico"]
+        Exames["Container: Gerenciamento de Exames"]
+        Notificações["Container: Notificações e Alertas"]
+        Estoque["Container: Controle de Estoque"]
+        Petshop["Container: Petshop - Venda de produtos"]
+    end
+
+    Cliente --> Atendimento
+    Cliente --> Cadastro
+    Atendimento --> Agenda
+    Atendimento --> Prontuário
+    Atendimento --> Notificações
+    Prontuário --> Exames
+    Prontuário --> Estoque
+    Petshop --> Estoque
+
+```
+
+## 9.3 Diagrama de Componente
+```mermaid
+flowchart TB
+    subgraph Sistema Veterinário
+        subgraph Atendimento
+            Atendimento_UI["Componente: Interface de Atendimento"]
+            Verifica_Agenda["Componente: Verificação de Agenda"]
+            Gerencia_Fila["Componente: Gerenciamento de Fila"]
+            Notifica_Cliente["Componente: Notificação de Cliente"]
+        end
+        
+        subgraph Cadastro
+            Cadastro_Cliente["Componente: Cadastro de Cliente"]
+            Cadastro_Animal["Componente: Cadastro de Animal"]
+            Ficha_Medica["Componente: Ficha Médica do Animal"]
+        end
+
+        subgraph Prontuário
+            Consulta["Componente: Consulta e Histórico"]
+            Prescrição["Componente: Prescrição Médica"]
+            Notas_Exames["Componente: Notas de Exames"]
+        end
+        
+        subgraph Exames
+            Exame_Solicitacao["Componente: Solicitação de Exames"]
+            Exame_Resultados["Componente: Resultados de Exames"]
+            Agendamento_Exames["Componente: Agendamento de Exames"]
+        end
+        
+        subgraph Estoque
+            Controle_Estoque["Componente: Controle de Estoque"]
+            Registro_Produto["Componente: Registro de Produto"]
+            Atualiza_Estoque["Componente: Atualização de Estoque"]
+        end
+    end
+    
+    Atendimento_UI --> Verifica_Agenda
+    Verifica_Agenda --> Gerencia_Fila
+    Gerencia_Fila --> Notifica_Cliente
+    Cadastro_Cliente --> Cadastro_Animal
+    Cadastro_Animal --> Ficha_Medica
+    Consulta --> Prescrição
+    Prescrição --> Notas_Exames
+    Exame_Solicitacao --> Exame_Resultados
+    Exame_Solicitacao --> Agendamento_Exames
+    Controle_Estoque --> Atualiza_Estoque
+
+```
+
+## 9.4 Diagrama de Código
+```mermaid
+classDiagram
+    class Atendimento {
+        +agendarConsulta(cliente, animal, data)
+        +verificarAgenda(veterinario, data)
+        +adicionarNaFila(cliente, animal)
+    }
+    
+    class Veterinario {
+        +realizarConsulta(animal)
+        +prescreverReceita(animal, medicamento)
+        +solicitarExame(animal, tipoExame)
+    }
+    
+    class Animal {
+        -nome: String
+        -idade: Int
+        -habitos: String
+        -restricoes: String
+        +registrarCondicao(condicao)
+        +adicionarFichaMedica(ficha)
+    }
+    
+    class FichaMedica {
+        -observacoes: String
+        -diagnostico: String
+        -receitas: List~Receita~
+        -exames: List~Exame~
+        +adicionarReceita(receita)
+        +adicionarExame(exame)
+    }
+    
+    class Estoque {
+        -medicamentos: List~Medicamento~
+        -racoes: List~Racao~
+        +atualizarEstoque(item)
+        +registrarVenda(cliente, item)
+    }
+    
+    class Exame {
+        -tipo: String
+        -data: Date
+        -resultado: String
+    }
+    
+    Atendimento --> Veterinario : "agendamento"
+    Atendimento --> Animal : "atualiza dados"
+    Veterinario --> FichaMedica : "anota consulta"
+    Veterinario --> Estoque : "prescreve"
+    FichaMedica --> Exame : "solicita"
+    Estoque --> Medicamento : "gerencia"
+
+```
+
+---
+
+# 10. Protótipo de telas
+
+[(voltar ao início)](#vitor_emanuel)
+
+## 10.1. Tela Menu
 ![Figura : Tela Menu](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_menu.png)
 
-## 9.2. Telas de Cadastro
-### 9.2.1 Cadastro de Agenda
+## 10.2. Telas de Cadastro
+### 10.2.1 Cadastro de Agenda
 ![Figura : cadastro de agenda](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_agenda.png)
-### 9.2.2 Cadastro de Animal
+### 10.2.2 Cadastro de Animal
 ![Figura : cadastro de animal](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_animal.png)
-### 9.2.3 Cadastro de Atendente
+### 10.2.3 Cadastro de Atendente
 ![Figura : cadastro de atendente](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_atendente.png)
-### 9.2.4 Cadastro de Atendimento
+### 10.2.4 Cadastro de Atendimento
 ![Figura : cadastro de atendimento](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_atendimento.png)
-### 9.2.5 Cadastro de Cliente
+### 10.2.5 Cadastro de Cliente
 ![Figura : cadastro de cliente](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_cliente.png)
-### 9.2.6 Cadastro de Exame
+### 10.2.6 Cadastro de Exame
 ![Figura : cadastro de exame](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_exame.png)
-### 9.2.7 Cadastro de Ficha
+### 10.2.7 Cadastro de Ficha
 ![Figura : cadastro de ficha](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_ficha.png)
-### 9.2.8 Cadastro de Parceria
+### 10.2.8 Cadastro de Parceria
 ![Figura : cadastro de parceria](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_parceria.png)
-### 9.2.9 Cadastro de Produto
+### 10.2.9 Cadastro de Produto
 ![Figura : cadastro de produto](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_produto.png)
-### 9.2.10 Cadastro de Servico
+### 10.2.10 Cadastro de Servico
 ![Figura : cadastro de servico](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_servico.png)
-### 9.2.11 Cadastro de Vacina
+### 10.2.11 Cadastro de Vacina
 ![Figura : cadastro de vacina](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_vacina.png)
-### 9.2.12 Cadastro de Venda
+### 10.2.12 Cadastro de Venda
 ![Figura : cadastro de venda](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_venda.png)
-### 9.2.13 Cadastro de Veterinario
+### 10.2.13 Cadastro de Veterinario
 ![Figura : cadastro de veterinario](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_cadastro_veterinario.png)
 
-## 9.3 Telas de Gráficos
-### 9.3.1 Gráfico de Estoque
+## 10.3 Telas de Gráficos
+### 10.3.1 Gráfico de Estoque
 ![Figura : grafico de estoque](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_grafico_estoque.png)
-### 9.3.1 Gráfico de Vendas
+### 10.3.1 Gráfico de Vendas
 ![Figura : grafico de vendas](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_grafico_vendas.png)
 
-## 9.4 Tela de Dashboard
+## 10.4 Tela de Dashboard
 ![Figura : dashboard](https://github.com/VitorSauzen/vitor_emanuel/blob/main/src/images/tela_dashboard.png)
 
 ---
 
-# 10. Diagrama de navegação de telas
+# 11. Diagrama de navegação de telas
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 ```mermaid
 graph LR
@@ -695,11 +902,11 @@ graph LR
 
 ---
 
-# 11. Pilha tecnológica
+# 12. Pilha tecnológica
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
-## 11.1. Gráfico da Pilha
+## 12.1. Gráfico da Pilha
 
 ```mermaid
 graph TD
@@ -738,25 +945,25 @@ graph TD
     J --> K
 ```
 
-## 11.2. Detalhamento das Camadas da Pilha
+## 12.2. Detalhamento das Camadas da Pilha
  
-### 11.2.1 **Linux** (Sistema Operacional): 
+### 12.2.1 **Linux** (Sistema Operacional): 
    - Sistema operacional de base que hospeda o servidor web, escolhendo uma distribuição que seja compatível com Apache e MySQL.
 
-### 11.2.2. **Apache (Servidor Web)**:
+### 12.2.2. **Apache (Servidor Web)**:
    - Responsável por gerenciar requisições HTTP e servir os arquivos da aplicação ao cliente.
    - Configurado para suportar **PHP** e se comunicar com o **MySQL** para processamento de dados e consultas.
 
-### 11.2.3. **Back-End (PHP - ScriptCase)**:
+### 12.2.3. **Back-End (PHP - ScriptCase)**:
    - **PHP com ScriptCase**: Framework que facilita o desenvolvimento de aplicações web com geração automática de formulários, dashboards e gráficos.
    - **APIs Internas e Externas**: Para funcionalidades como controle de estoque, registros de consultas, e gráficos, além de integração com sistemas de terceiros, se necessário.
    - **Gerenciamento de Sessões**: Para login seguro e controle de permissões, essencial para o acesso de veterinários, clientes e atendentes ao sistema.
 
-### 11.2.4. **Banco de Dados (MySQL)**:
+### 12.2.4. **Banco de Dados (MySQL)**:
    - **Tabelas Relacionais**: Estruturadas para armazenar dados de clientes, animais, atendimentos, prontuários, etc.
    - **Armazenamento de Histórico Clínico**: Estrutura de dados para o registro detalhado de consultas, exames e procedimentos, que facilita a consulta e histórico do animal.
 
-### 11.2.5. **Front-End (HTML, CSS, Bootstrap, JavaScript)**:
+### 12.2.5. **Front-End (HTML, CSS, Bootstrap, JavaScript)**:
    - **HTML/CSS**: Estrutura e estilização das páginas.
    - **Bootstrap**: Framework CSS integrado ao ScriptCase, que permite um design responsivo e consistente.
    - **JavaScript**: Para funcionalidades interativas, como formulários dinâmicos e navegação fluida.
@@ -765,25 +972,25 @@ graph TD
 
 ---
 
-# 12. Requisitos de sistemas
+# 13. Requisitos de sistemas
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
-## 12.1. Requisitos do Lado Cliente
+## 13.1. Requisitos do Lado Cliente
 
-### 12.1.1. Dispositivos:
+### 13.1.1. Dispositivos:
    - O sistema é acessível a partir de PCs, tablets e smartphones, para facilitar o uso tanto por funcionários quanto por clientes.
 
-### 12.1.2. Navegadores Web:
+### 13.1.2. Navegadores Web:
    - Compatível com navegadores modernos, como **Google Chrome**, **Mozilla Firefox**, e **Microsoft Edge** para melhor acessibilidade e experiência do usuário.
 
-### 12.1.3. Interface de Usuário:
+### 13.1.3. Interface de Usuário:
    - A interface é construída com **React.js** e **Bootstrap** para uma experiência de usuário responsiva e interativa.
 
-### 12.1.4. Autenticação:
+### 13.1.4. Autenticação:
    - Os usuários precisam autenticar-se por meio de login para acessar as funcionalidades, garantindo segurança e controle de acesso.
 
-### 12.1.5. Funcionalidades Disponíveis:
+### 13.1.5. Funcionalidades Disponíveis:
    - **Notificações** de vacinas e procedimentos periódicos.
    - **Agendamento** de consultas e exames.
    - **Acesso ao histórico** completo do animal, incluindo exames e tratamentos.
@@ -791,22 +998,22 @@ graph TD
    - **Marcação e cancelamento** de consultas de forma simplificada.
 
 
-## 12.2. Requisitos do Lado Servidor
+## 13.2. Requisitos do Lado Servidor
 
-### 12.2.1. Servidor de Aplicação:
+### 13.2.1. Servidor de Aplicação:
    - O **Node.js** serve como o servidor de aplicação principal, gerenciando a lógica de negócios e as interações do cliente com o sistema.
 
-### 12.2.2. Servidor de Banco de Dados:
+### 13.2.2. Servidor de Banco de Dados:
    - Utilização do **MySQL** para dados relacionais (clientes, animais, veterinários, consultas)
    - **MongoDB** para dados não relacionais, como logs e histórico clínico dos animais.
 
-### 12.2.3. Servidor Web:
+### 13.2.3. Servidor Web:
    - O **Apache** é o servidor web responsável por servir conteúdo estático e lidar com requisições dinâmicas para o backend.
 
-### 12.2.4. API REST:
+### 13.2.4. API REST:
    - A **API** baseada em **Express.js** é o ponto de comunicação entre o cliente e o servidor, facilitando o envio de dados e recebimento de respostas.
 
-### 12.2.5. Funcionalidades do Servidor:
+### 13.2.5. Funcionalidades do Servidor:
    - **Autenticação JWT**: Garante que os usuários autenticados tenham acesso seguro às funcionalidades.
    - **Gestão de Usuários e Permissões**: Controle de acesso baseado em permissões.
    - **Gestão de Agenda**: Organização de horários de consultas e exames.
@@ -822,13 +1029,13 @@ graph TD
 
 ---
 
-# 13. Considerações sobre segurança
+# 14. Considerações sobre segurança
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 A segurança é um aspecto essencial na arquitetura de um sistema para garantir a proteção de dados sensíveis, prevenir ataques cibernéticos, e assegurar que o software esteja em conformidade com regulamentações. Uma abordagem preventiva é fundamental para a confiança dos usuários e para a estabilidade da aplicação.
 
-## 13.1. Lado Cliente
+## 14.1. Lado Cliente
 
 ### Regras de Senha
 - **Força da senha**: Exige no mínimo 8 caracteres, com pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial.
@@ -839,7 +1046,7 @@ A segurança é um aspecto essencial na arquitetura de um sistema para garantir 
 - **Captcha**: Adicionado em formulários de login para evitar ataques de bots.
 - **Antivírus**: Recomenda-se que os dispositivos do cliente tenham antivírus atualizado para evitar roubo de credenciais e outros tipos de malware.
 
-## 13.2. Lado Servidor
+## 14.2. Lado Servidor
 
 ### Sistema Operacional
 - **Linux**: O servidor de aplicação e o banco de dados operam sobre uma distribuição Linux (como Ubuntu Server ou CentOS) devido à estabilidade, segurança e personalização oferecidas pela plataforma para ambientes web.
@@ -862,13 +1069,13 @@ A segurança é um aspecto essencial na arquitetura de um sistema para garantir 
 
 ---
 
-# 14. Instalação, Manutenção e Novas Funcionalidades
+# 15. Instalação, Manutenção e Novas Funcionalidades
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 Este tópico descreve os processos necessários para a instalação, manutenção e expansão de funcionalidades do sistema, incluindo critérios para avaliação de novas demandas.
 
-## 14.1. Instalação
+## 15.1. Instalação
 
 Para garantir que o sistema seja configurado corretamente, seguem as diretrizes de instalação:
 
@@ -884,7 +1091,7 @@ Para garantir que o sistema seja configurado corretamente, seguem as diretrizes 
   - Garantir a compatibilidade com navegadores modernos (Chrome, Firefox, Edge).
   - Instruir o cliente a manter o antivírus atualizado e seguir políticas de senha seguras.
 
-## 14.2. Manutenção
+## 15.2. Manutenção
 
 A manutenção contínua é essencial para a estabilidade e segurança do sistema. As regras incluem:
 
@@ -900,7 +1107,7 @@ A manutenção contínua é essencial para a estabilidade e segurança do sistem
   - Manter logs de auditoria para rastrear atividades e detectar tentativas de acesso indevido ou anomalias no sistema.
   - Monitorar o desempenho do sistema para identificar gargalos e otimizar o funcionamento conforme necessário.
 
-## 14.3. Novas Funcionalidades
+## 15.3. Novas Funcionalidades
 
 Para solicitações de novas funcionalidades, devem ser consideradas as seguintes diretrizes:
 
@@ -920,13 +1127,13 @@ Essas políticas garantem que o sistema permaneça estável e seguro, além de o
 
 ---
 
-# 15. Treinamento
+# 16. Treinamento
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
 Para assegurar que o sistema seja utilizado de maneira eficaz, é necessário oferecer treinamentos específicos para os usuários finais e para o administrador do sistema. Esses treinamentos ajudarão a garantir que todos os envolvidos saibam utilizar as funcionalidades disponíveis, evitando erros e aumentando a eficiência operacional.
 
-## 15.1. Treinamento dos Usuários
+## 16.1. Treinamento dos Usuários
 
 O treinamento dos usuários será focado nas principais funcionalidades que eles utilizarão no dia a dia. Seguem os pontos principais:
 
@@ -941,7 +1148,7 @@ O treinamento dos usuários será focado nas principais funcionalidades que eles
 
 - **Metodologia**: Treinamentos presenciais com duração de uma a duas horas, com recursos audiovisuais e materiais de apoio. Haverá também vídeos tutoriais e guias rápidos disponíveis para consulta posterior.
 
-## 15.2. Treinamento do Administrador do Sistema
+## 16.2. Treinamento do Administrador do Sistema
 
 O treinamento do administrador do sistema é mais técnico e abrange aspectos de configuração, segurança e manutenção. Ele deve estar preparado para lidar com problemas, executar backups e monitorar o sistema.
 
@@ -958,11 +1165,11 @@ O treinamento do administrador do sistema é mais técnico e abrange aspectos de
 
 ---
 
-# 16. Script SQL
+# 17. Script SQL
 
-[(voltar ao topo)](#vitor_emanuel)
+[(voltar ao início)](#vitor_emanuel)
 
-## 16.1 Script para criar as tabelas
+## 17.1 Script para criar as tabelas
 ```SQL
 -- Tabela de Clientes
 CREATE TABLE Cliente (
@@ -1102,7 +1309,7 @@ CREATE TABLE Servico (
 );
 ```
 
-## 16.2 Scrip para inserir dados fictícios
+## 17.2 Scrip para inserir dados fictícios
 ```SQL
 -- Inserindo registros na tabela Cliente
 INSERT INTO Cliente (cpf, nome, endereco, telefone, email, fidelidade) VALUES
