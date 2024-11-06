@@ -675,6 +675,7 @@ classDiagram
 ---
 
 # 9. Diagrama C4
+[(voltar ao início)](#vitor_emanuel)
 
 ## 9.1 Diagrama de Contexto
 ```mermaid
@@ -1415,3 +1416,5 @@ INSERT INTO Servico (tipo_servico, preco, id_animal, data_servico) VALUES
 ('tosa', 60.00, 4, '2024-09-21'),
 ('banho', 50.00, 5, '2024-09-22');
 ```
+
+[(voltar ao início)](#vitor_emanuel)
